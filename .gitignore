@@ -2,6 +2,8 @@ website/index.html
 website/css/main.css
 website/js/main.js
 website/cache
+website/wp-config.php
+website/.htaccess
 sources/styles/node_modules
 sources/javascript/components
 sources/javascript/build
