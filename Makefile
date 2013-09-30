@@ -22,11 +22,6 @@ js:
 clean-js:
 	rm -fr sources/javascript/build sources/javascript/components sources/javascript/template.js
 
-ftp-push:
-	clear
-	make all
-	git ftp push -u {place-user} -p {place-password} ftp://{place-site-address}
-
 stage-deploy:
 	git deploy stage
 ##	tools/push-compiled
