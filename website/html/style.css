@@ -1,1 +1,141 @@
-﻿
+﻿body {
+background: url(imagenes/fondo.jpg) no-repeat center top;
+background-size: cover;
+margin: 0;
+padding: 0;
+}
+h1 {
+padding-right: 10px;
+padding-left: 10%;
+margin: 0;
+float: left;
+} 
+h1 a {
+width: 250px; 
+height: 114px; 
+background: url(imagenes/LogoSMR.png) no-repeat; 
+display: block; 
+margin: 0; 
+text-decoration: none; 
+text-align: right;
+} 
+h2 {
+color: #0B243B;
+font-family: 'Monda', sans-serif;
+font-size: 25px; 
+font-weight: 700;
+margin: 0; 
+padding-top: 25px; 
+letter-spacing: -1px;
+}
+h3 {
+background: rgba(120, 120, 120, 0.5);
+color: #fff;
+font-family: 'Monda', sans-serif;
+font-size: 25px; 
+font-weight: 700;
+margin: -41px 0 0 0;
+text-align: left;
+padding-left: 50px
+}
+.destacado {
+color: #666; 
+margin: -7px 0 0 0; 
+font-family: 'Monda', sans-serif;
+font-size: 25px;
+line-height: 25px;
+letter-spacing: -1px;
+}
+#barra-ng {
+height: 30px;
+background:  rgba(1, 1, 1, 0.5); 
+margin-top: 60px;
+}
+#barra-vd {
+height: 10px; 
+background: #088A4B; 
+}
+#els-centrales {
+float:left;
+}
+#container {
+background: rgba(255, 255, 255, 0.9); 
+padding: 0; 
+margin:0;
+}
+nav a {
+text-decoration:none;
+color: #666;
+-webkit-transition: all 200ms ease-out; 
+}
+nav a:hover{
+text-decoration:none;
+color: #088A4B;
+opacity: 0.5;
+}
+nav ul li {color: #666; 
+font-family: 'Monda', sans-serif;
+font-weight: 300;
+font-size: 15px; 
+list-style: none; 
+text-align: left; 
+text-decoration:none;
+}
+nav { 
+float: right;
+padding-right: 10%;
+padding-top: 10px
+}
+nav ul {
+list-style: none; 
+color: #666;
+margin: 0;
+padding: 0;
+}
+.barra-vd {
+font-family: 'Monda', sans-serif;
+font-size: 15px;
+color: #088A4B;
+display: inline;
+}
+.clear {
+clear: both;
+}
+#galeria {
+height: 50px;
+background: #666
+}
+#banda-negra {
+height: 70px;
+background:  rgba(1, 1, 1, 0.5);
+}
+#container2 {
+text-align: center;
+width: 80%;
+margin: 0 10% 0 10%;
+padding: 0;
+}
+#contacto {
+height: 30px;
+}
+
+footer {
+background: rgba(1, 1, 1, 0.5);
+text-align: center;
+}
+footer a {
+color: #999; 
+margin:0; 
+font-family: 'Monda', sans-serif; 
+font-weight: 700;
+font-size: 15px;
+text-decoration: none;
+}
+.mediax {
+color: #999; 
+margin:0; 
+font-family: 'Monda', sans-serif;
+font-weight: 700 ;
+font-size: 15px;
+display: inline;
+}
