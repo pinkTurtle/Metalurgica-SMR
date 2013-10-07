@@ -26,18 +26,18 @@ Text Domain: metalurgica-smr
   transition-duration: 0.5s;
 }
 .isotope {
-  -webkit-transition-property: height, width;
-  -moz-transition-property: height, width;
-  -o-transition-property: height, width;
-  -ms-transition-property: height, width;
-  transition-property: height, width;
+  -webkit-transition-property: normalize('transition-property', height, width, webkit);
+  -moz-transition-property: normalize('transition-property', height, width, moz);
+  -o-transition-property: normalize('transition-property', height, width, o);
+  -ms-transition-property: normalize('transition-property', height, width, ms);
+  transition-property: normalize('transition-property', height, width);
 }
 .isotope .isotope-item {
-  -webkit-transition-property: -webkit-transform, opacity, width;
-  -moz-transition-property: -moz-transform, opacity, width;
-  -o-transition-property: -o-transform, opacity, width;
-  -ms-transition-property: -ms-transform, opacity, width;
-  transition-property: transform, opacity, width;
+  -webkit-transition-property: normalize('transition-property', transform, opacity, width, webkit);
+  -moz-transition-property: normalize('transition-property', transform, opacity, width, moz);
+  -o-transition-property: normalize('transition-property', transform, opacity, width, o);
+  -ms-transition-property: normalize('transition-property', transform, opacity, width, ms);
+  transition-property: normalize('transition-property', transform, opacity, width);
 }
 .isotope.no-transition,
 .isotope.no-transition .isotope-item,
@@ -49,11 +49,11 @@ Text Domain: metalurgica-smr
   transition-duration: 0s;
 }
 .isotope.infinite-scrolling {
-  -webkit-transition: none;
-  -moz-transition: none;
-  -o-transition: none;
-  -ms-transition: none;
-  transition: none;
+  -webkit-transition: normalize('transition', none, webkit);
+  -moz-transition: normalize('transition', none, moz);
+  -o-transition: normalize('transition', none, o);
+  -ms-transition: normalize('transition', none, ms);
+  transition: normalize('transition', none);
 }
 body,
 html {
@@ -402,11 +402,11 @@ input[type="button"] {
   text-align: center;
   margin: 0 10px 0 0;
   background: #df5c26;
-  background: #df5c26 -webkit-linear-gradient(top, rgba(255,255,255,0.2) 0%, rgba(0,0,0,0.2) 100%);
-  background: #df5c26 -moz-linear-gradient(top, rgba(255,255,255,0.2) 0%, rgba(0,0,0,0.2) 100%);
-  background: #df5c26 -o-linear-gradient(top, rgba(255,255,255,0.2) 0%, rgba(0,0,0,0.2) 100%);
-  background: #df5c26 -ms-linear-gradient(top, rgba(255,255,255,0.2) 0%, rgba(0,0,0,0.2) 100%);
-  background: #df5c26 linear-gradient(to bottom, rgba(255,255,255,0.2) 0%, rgba(0,0,0,0.2) 100%);
+  background: normalize('background', #df5c26 linear-gradient(top, rgba(255,255,255,0.2) 0%, rgba(0,0,0,0.2) 100%), webkit);
+  background: normalize('background', #df5c26 linear-gradient(top, rgba(255,255,255,0.2) 0%, rgba(0,0,0,0.2) 100%), moz);
+  background: normalize('background', #df5c26 linear-gradient(top, rgba(255,255,255,0.2) 0%, rgba(0,0,0,0.2) 100%), o);
+  background: normalize('background', #df5c26 linear-gradient(top, rgba(255,255,255,0.2) 0%, rgba(0,0,0,0.2) 100%), ms);
+  background: normalize('background', #df5c26 linear-gradient(top, rgba(255,255,255,0.2) 0%, rgba(0,0,0,0.2) 100%));
   color: #fff;
   border: none;
   -webkit-border-radius: 0;
@@ -427,11 +427,11 @@ input[type="submit"]:hover,
 input[type="reset"]:hover,
 input[type="button"]:hover {
   background: #df5c26;
-  background: #df5c26 -webkit-linear-gradient(top, rgba(0,0,0,0.2) 100%, rgba(255,255,255,0.2) 0%);
-  background: #df5c26 -moz-linear-gradient(top, rgba(0,0,0,0.2) 100%, rgba(255,255,255,0.2) 0%);
-  background: #df5c26 -o-linear-gradient(top, rgba(0,0,0,0.2) 100%, rgba(255,255,255,0.2) 0%);
-  background: #df5c26 -ms-linear-gradient(top, rgba(0,0,0,0.2) 100%, rgba(255,255,255,0.2) 0%);
-  background: #df5c26 linear-gradient(to bottom, rgba(0,0,0,0.2) 100%, rgba(255,255,255,0.2) 0%);
+  background: normalize('background', #df5c26 linear-gradient(top, rgba(0,0,0,0.2) 100%, rgba(255,255,255,0.2) 0%), webkit);
+  background: normalize('background', #df5c26 linear-gradient(top, rgba(0,0,0,0.2) 100%, rgba(255,255,255,0.2) 0%), moz);
+  background: normalize('background', #df5c26 linear-gradient(top, rgba(0,0,0,0.2) 100%, rgba(255,255,255,0.2) 0%), o);
+  background: normalize('background', #df5c26 linear-gradient(top, rgba(0,0,0,0.2) 100%, rgba(255,255,255,0.2) 0%), ms);
+  background: normalize('background', #df5c26 linear-gradient(top, rgba(0,0,0,0.2) 100%, rgba(255,255,255,0.2) 0%));
   text-decoration: none;
 }
 a.button:active,
@@ -440,11 +440,11 @@ input[type="submit"]:active,
 input[type="reset"]:active,
 input[type="button"]:active {
   background: #df5c26;
-  background: #df5c26 -webkit-linear-gradient(top, rgba(0,0,0,0.2) 100%, rgba(255,255,255,0.2) 0%);
-  background: #df5c26 -moz-linear-gradient(top, rgba(0,0,0,0.2) 100%, rgba(255,255,255,0.2) 0%);
-  background: #df5c26 -o-linear-gradient(top, rgba(0,0,0,0.2) 100%, rgba(255,255,255,0.2) 0%);
-  background: #df5c26 -ms-linear-gradient(top, rgba(0,0,0,0.2) 100%, rgba(255,255,255,0.2) 0%);
-  background: #df5c26 linear-gradient(to bottom, rgba(0,0,0,0.2) 100%, rgba(255,255,255,0.2) 0%);
+  background: normalize('background', #df5c26 linear-gradient(top, rgba(0,0,0,0.2) 100%, rgba(255,255,255,0.2) 0%), webkit);
+  background: normalize('background', #df5c26 linear-gradient(top, rgba(0,0,0,0.2) 100%, rgba(255,255,255,0.2) 0%), moz);
+  background: normalize('background', #df5c26 linear-gradient(top, rgba(0,0,0,0.2) 100%, rgba(255,255,255,0.2) 0%), o);
+  background: normalize('background', #df5c26 linear-gradient(top, rgba(0,0,0,0.2) 100%, rgba(255,255,255,0.2) 0%), ms);
+  background: normalize('background', #df5c26 linear-gradient(top, rgba(0,0,0,0.2) 100%, rgba(255,255,255,0.2) 0%));
 }
 a.button.full-width,
 a.button.full-width:visited,
@@ -547,11 +547,11 @@ textarea:disabled::-moz-input-placeholder {
   background-color: #fbfbfb;
 }
 input[type="submit"]:disabled {
-  background: #fbfbfb -webkit-linear-gradient(top, rgba(255,255,255,0.1) 0%, rgba(0,0,0,0.2) 100%);
-  background: #fbfbfb -moz-linear-gradient(top, rgba(255,255,255,0.1) 0%, rgba(0,0,0,0.2) 100%);
-  background: #fbfbfb -o-linear-gradient(top, rgba(255,255,255,0.1) 0%, rgba(0,0,0,0.2) 100%);
-  background: #fbfbfb -ms-linear-gradient(top, rgba(255,255,255,0.1) 0%, rgba(0,0,0,0.2) 100%);
-  background: #fbfbfb linear-gradient(to bottom, rgba(255,255,255,0.1) 0%, rgba(0,0,0,0.2) 100%);
+  background: normalize('background', #fbfbfb linear-gradient(top, rgba(255,255,255,0.1) 0%, rgba(0,0,0,0.2) 100%), webkit);
+  background: normalize('background', #fbfbfb linear-gradient(top, rgba(255,255,255,0.1) 0%, rgba(0,0,0,0.2) 100%), moz);
+  background: normalize('background', #fbfbfb linear-gradient(top, rgba(255,255,255,0.1) 0%, rgba(0,0,0,0.2) 100%), o);
+  background: normalize('background', #fbfbfb linear-gradient(top, rgba(255,255,255,0.1) 0%, rgba(0,0,0,0.2) 100%), ms);
+  background: normalize('background', #fbfbfb linear-gradient(top, rgba(255,255,255,0.1) 0%, rgba(0,0,0,0.2) 100%));
 }
 textarea:disabled:hover,
 input:disabled:hover {
@@ -559,11 +559,11 @@ input:disabled:hover {
   background-color: #fbfbfb;
 }
 input[type="submit"]:disabled:hover {
-  background: #fbfbfb -webkit-linear-gradient(top, rgba(255,255,255,0.1) 0%, rgba(0,0,0,0.2) 100%);
-  background: #fbfbfb -moz-linear-gradient(top, rgba(255,255,255,0.1) 0%, rgba(0,0,0,0.2) 100%);
-  background: #fbfbfb -o-linear-gradient(top, rgba(255,255,255,0.1) 0%, rgba(0,0,0,0.2) 100%);
-  background: #fbfbfb -ms-linear-gradient(top, rgba(255,255,255,0.1) 0%, rgba(0,0,0,0.2) 100%);
-  background: #fbfbfb linear-gradient(to bottom, rgba(255,255,255,0.1) 0%, rgba(0,0,0,0.2) 100%);
+  background: normalize('background', #fbfbfb linear-gradient(top, rgba(255,255,255,0.1) 0%, rgba(0,0,0,0.2) 100%), webkit);
+  background: normalize('background', #fbfbfb linear-gradient(top, rgba(255,255,255,0.1) 0%, rgba(0,0,0,0.2) 100%), moz);
+  background: normalize('background', #fbfbfb linear-gradient(top, rgba(255,255,255,0.1) 0%, rgba(0,0,0,0.2) 100%), o);
+  background: normalize('background', #fbfbfb linear-gradient(top, rgba(255,255,255,0.1) 0%, rgba(0,0,0,0.2) 100%), ms);
+  background: normalize('background', #fbfbfb linear-gradient(top, rgba(255,255,255,0.1) 0%, rgba(0,0,0,0.2) 100%));
 }
 label,
 legend {
@@ -622,11 +622,11 @@ a.small-button {
   text-decoration: none;
   position: relative;
   padding-right: 60px;
-  -webkit-transition: background-color 200ms ease-in;
-  -moz-transition: background-color 200ms ease-in;
-  -o-transition: background-color 200ms ease-in;
-  -ms-transition: background-color 200ms ease-in;
-  transition: background-color 200ms ease-in;
+  -webkit-transition: normalize('transition', background-color 200ms ease-in, webkit);
+  -moz-transition: normalize('transition', background-color 200ms ease-in, moz);
+  -o-transition: normalize('transition', background-color 200ms ease-in, o);
+  -ms-transition: normalize('transition', background-color 200ms ease-in, ms);
+  transition: normalize('transition', background-color 200ms ease-in);
 }
 a.big-button:hover,
 a.small-button:hover {
@@ -703,11 +703,11 @@ a.menu-button span {
   background-color: #505050;
   color: #ff8a00;
   padding-left: 20px;
-  -webkit-transition: background-color 200ms ease-in;
-  -moz-transition: background-color 200ms ease-in;
-  -o-transition: background-color 200ms ease-in;
-  -ms-transition: background-color 200ms ease-in;
-  transition: background-color 200ms ease-in;
+  -webkit-transition: normalize('transition', background-color 200ms ease-in, webkit);
+  -moz-transition: normalize('transition', background-color 200ms ease-in, moz);
+  -o-transition: normalize('transition', background-color 200ms ease-in, o);
+  -ms-transition: normalize('transition', background-color 200ms ease-in, ms);
+  transition: normalize('transition', background-color 200ms ease-in);
   position: relative;
 }
 a.menu-button span:before,
@@ -724,11 +724,11 @@ a.menu-button span:after {
 }
 a.menu-button span:after {
   top: -10px;
-  -webkit-transition: opacity 200ms ease-in;
-  -moz-transition: opacity 200ms ease-in;
-  -o-transition: opacity 200ms ease-in;
-  -ms-transition: opacity 200ms ease-in;
-  transition: opacity 200ms ease-in;
+  -webkit-transition: normalize('transition', opacity 200ms ease-in, webkit);
+  -moz-transition: normalize('transition', opacity 200ms ease-in, moz);
+  -o-transition: normalize('transition', opacity 200ms ease-in, o);
+  -ms-transition: normalize('transition', opacity 200ms ease-in, ms);
+  transition: normalize('transition', opacity 200ms ease-in);
   background-position: -200px -20px;
   opacity: 0;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
