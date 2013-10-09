@@ -47,15 +47,17 @@
             <h3>Experiencia y Seguridad</h3>
             <h4>Sistema de gestión de calidad</h4>
           </div>
+
+				<nav id="site-navigation" class="navigation main-navigation <?php echo $slug; ?>" role="navigation">
+          <?php wp_nav_menu( array( 'theme_location' => 'primario', 'menu_class' => 'nav-menu' ) ); ?>
+
+					<?php //get_search_form(); ?>
+				</nav><!-- #site-navigation -->
+
         </div><!-- .container -->
       </div><!-- .wrapper -->
 
-			<div id="navbar" class="navbar">
-				<nav id="site-navigation" class="navigation main-navigation" role="navigation">
-					<h3 class="menu-toggle"><?php _e( 'Menu', 'twentythirteen' ); ?></h3>
-					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
-				</nav><!-- #site-navigation -->
-			</div><!-- #navbar -->
+
 		</header><!-- #masthead -->
 
 		<div id="main" class="site-main">
