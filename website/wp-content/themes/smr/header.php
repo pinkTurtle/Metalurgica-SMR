@@ -15,6 +15,9 @@
 <html <?php language_attributes(); ?>>
 <!--<![endif]-->
 <head>
+  <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>" type="text/css" />
+	<link href='http://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Monda:400,700' rel='stylesheet' type='text/css'>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width">
 	<title><?php wp_title( '|', true, 'right' ); ?></title>
@@ -29,13 +32,23 @@
 <body <?php body_class(); ?>>
 	<div id="page" class="hfeed site">
 		<header id="masthead" class="site-header" role="banner">
-			<a class="home-link" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-				<h1 class="site-title"><?php bloginfo( 'name' ); ?></h1>
-	      <div class="blog-subtitles">
-				  <h3 class="site-title"><?php bloginfo( 'name' ); ?></h1>
-				  <h4 class="site-title"><?php bloginfo( 'name' ); ?></h1>
-	      </div>
-			</a>
+
+      <div class="wrapper">
+        <div class="container">
+          <h1 class="site-header">
+            <a href="<?php echo esc_url( home_url( '/' ) ); ?>" 
+              title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" 
+              rel="home">
+              <img src="<?php echo get_bloginfo('template_url'); ?>/images/LogoSMR.png" alt="Logo SMR">
+            </a>
+          </h1>
+
+          <div class="els-centrales">
+            <h3>Experiencia y Seguridad</h3>
+            <h4>Sistema de gestión de calidad</h4>
+          </div>
+        </div><!-- .container -->
+      </div><!-- .wrapper -->
 
 			<div id="navbar" class="navbar">
 				<nav id="site-navigation" class="navigation main-navigation" role="navigation">
