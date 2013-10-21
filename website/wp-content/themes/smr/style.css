@@ -726,6 +726,11 @@ header .wrapper .container .els-centrales h4 {
   letter-spacing: -1px;
   font-weight: 300;
 }
+header .wrapper .container:after {
+  content: "";
+  clear: both;
+  width: 100%;
+}
 header nav {
   float: right;
   padding-right: 10%;
@@ -762,8 +767,19 @@ header nav ul li a:hover {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
   filter: alpha(opacity=50);
 }
-header .clear {
-  clear: both;
+header nav .presionado {
+  background: #088a4b;
+  color: #fff;
+  display: inline-block;
+  width: 80px;
+  padding-left: 5px;
+}
+header nav .presionado:hover {
+  background: #088a4b;
+  color: #fff;
+  opacity: 1;
+  -ms-filter: none;
+  filter: none;
 }
 #primary .wrapper {
   border-top: solid 100px rgba(1,1,1,0.5);
@@ -775,9 +791,14 @@ header .clear {
   margin: -80px auto 0;
   border: 0;
 }
+#primary .wrapper:after {
+  content: "";
+  clear: both;
+  width: 100%;
+}
 #primary .wrapper .info {
   width: 80%;
-  margin: 20px auto 0;
+  margin: 20px auto 30px;
   padding: 0;
   background: rgba(255,255,255,0.9);
 }
@@ -791,7 +812,7 @@ header .clear {
   padding: 10px 0 0 70px;
   height: 40px;
 }
-#primary .wrapper .contenido {
+#primary .wrapper .info .contenido {
   font-family: 'Oxygen', sans-serif;
   color: #666;
   padding: 10px 0 20px 0;
@@ -799,6 +820,104 @@ header .clear {
   text-align: justify;
   font-size: 15px;
   line-height: 20px;
+}
+#primary .wrapper .info .imagen-servicio {
+  padding: 10px 10px 0 75px;
+  float: left;
+}
+#primary .wrapper .info .texto-servicio {
+  font-family: 'Monda', sans-serif;
+  color: #088a4b;
+  font-size: 15px;
+  line-height: 18px;
+  margin: 0;
+  padding-top: 25px;
+  padding-left: 5px;
+  float: left;
+  width: 28%;
+}
+#primary .wrapper .info .titulo-serv {
+  font-family: 'Monda', sans-serif;
+  font-weight: 700;
+  color: #088a4b;
+  font-size: 15px;
+  line-height: 18px;
+  margin: 0;
+  padding-top: 25px;
+  padding-left: 5px;
+}
+#primary .wrapper .info .contenedor-galerias {
+  width: 30%;
+  height: 200px;
+  float: left;
+  margin-left: 20px;
+  background: #333;
+}
+#primary .wrapper .info .descripciones {
+  padding: 20px 70px 0 0;
+  float: right;
+  display: block;
+}
+#primary .wrapper .info .descripciones p {
+  font-family: 'Oxygen', sans-serif;
+  color: #666;
+  font-size: 13px;
+  line-height: 18px;
+  margin: 0;
+}
+#primary .wrapper .info .descripciones a {
+  color: #666;
+  text-decoration: none;
+}
+#primary .wrapper .info .descripciones a:before {
+  content: " > ";
+  color: #088a4b;
+}
+#primary .wrapper .info .descripciones a:hover {
+  color: #088a4b;
+}
+#primary .wrapper .info .descripciones .desplegables {
+  float: none;
+}
+#primary .wrapper .info .servicios {
+  border-top: 1px dotted #088a4b;
+  display: inline-block;
+  padding: 20px 0 0 0;
+  margin-top: 20px;
+  width: 100%;
+  text-align: center;
+}
+#primary .wrapper .info .servicios article {
+  padding: 10px;
+  float: left;
+  width: 33%;
+}
+#primary .wrapper .info .servicios article .texto-servicio-gris {
+  font-family: 'Monda', sans-serif;
+  color: #666;
+  font-size: 13px;
+  line-height: 15px;
+  margin: 0;
+  padding: 5px;
+  height: 50px;
+}
+#primary .wrapper .info .servicios-restantes {
+  width: 35%;
+  float: left;
+}
+#primary .wrapper .info .servicios-restantes a {
+  padding: 10px 10px 0 75px;
+  float: left;
+}
+#primary .wrapper .info .servicios-restantes p {
+  font-family: 'Monda', sans-serif;
+  color: #666;
+  font-size: 11px;
+  line-height: 13px;
+  width: 20%;
+  height: 100px;
+  float: left;
+  padding-top: 35px;
 }
 div#footer .wrap {
   font: normal 14px/21px $menu;

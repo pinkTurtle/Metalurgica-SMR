@@ -1,13 +1,13 @@
 header
   .wrapper
-    background: rgba(1, 1, 1, 0.5)
+    background: $negro-opacidad5
     padding-top: 30px
     margin-top: 50px
     .container
-      background: rgba(255, 255, 255, 0.9)
+      background: $blanco-opacidad
       padding: 0 
       margin:0
-      border-top: 10px solid #088A4B
+      border-top: 10px solid $verde-hover
       h2 
         padding-right: 10px
         padding-left: 10%
@@ -16,7 +16,7 @@ header
       .els-centrales
         float:left
         h3
-          color: #0B243B
+          color: $azul-fuente
           font-family: $titulos-font
           font-size: 25px
           font-weight: 700
@@ -24,14 +24,18 @@ header
           padding-top: 35px
           letter-spacing: -1px
         h4
-          color: #666
+          color: $gris-fuente
           margin: -7px 0 0 0
           font-family: $titulos-font
           font-size: 25px
           line-height: 40px
           letter-spacing: -1px
           font-weight: 300
-         
+      &:after
+        content: ""
+        clear: both
+        width: 100%
+
   nav 
     float: right
     padding-right: 10%
@@ -60,5 +64,13 @@ header
             text-decoration:none
             color: $verde-hover
             opacity: 0.5
-  .clear 
-    clear: both
+    .presionado
+      background: $verde-hover
+      color: $blanco-fuente
+      display: inline-block
+      width: 80px
+      padding-left: 5px
+      &:hover
+        background: $verde-hover
+        color: $blanco-fuente
+        opacity: 1

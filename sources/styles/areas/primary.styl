@@ -1,34 +1,127 @@
 #primary
   .wrapper
-    border-top: solid 100px rgba(1, 1, 1, 0.5)
+    border-top: solid 100px $negro-opacidad5
     hr
-     height: 20px
-     background: $verde-hover
-     width: 80%
-     margin: -80px auto 0
-     border: 0
+      height: 20px
+      background: $verde-hover
+      width: 80%
+      margin: -80px auto 0
+      border: 0
+    &:after
+        content: ""
+        clear: both
+        width: 100%
     
     .info
-     width: 80%
-     margin: 20px auto 0
-     padding: 0
-     background: rgba(255, 255, 255, 0.9)
-     
-     h1
-      background: rgba(1, 1, 1, 0.7)
-      color: $blanco-fuente
-      font-family: $titulos-font
-      font-size: 20px
-      font-weight: 300
-      margin: 0
-      padding: 10px 0 0 70px
-      height: 40px
+      width: 80%
+      margin: 20px auto 30px
+      padding: 0
+      background: $blanco-opacidad
+      h1
+        background: $negro-opacidad7
+        color: $blanco-fuente
+        font-family: $titulos-font
+        font-size: 20px
+        font-weight: 300
+        margin: 0
+        padding: 10px 0 0 70px
+        height: 40px
+      
+      .contenido
+        font-family: $textos-font
+        color: $gris-fuente
+        padding: 10px 0 20px 0
+        margin: 0 70px
+        text-align: justify
+        font-size: 15px
+        line-height: 20px
     
-    .contenido
-      font-family: $textos-font
-      color: $gris-fuente
-      padding: 10px 0 20px 0
-      margin: 0 70px
-      text-align: justify
-      font-size: 15px
-      line-height: 20px
+      .imagen-servicio
+        padding: 10px 10px 0 75px
+        float: left
+      
+      .texto-servicio
+        font-family: $titulos-font
+        color: $verde-hover
+        font-size: 15px
+        line-height: 18px
+        margin: 0
+        padding-top: 25px
+        padding-left: 5px
+        float: left
+        width: 28%
+
+      .titulo-serv
+        font-family: $titulos-font
+        font-weight: 700
+        color: $verde-hover
+        font-size: 15px
+        line-height: 18px
+        margin: 0
+        padding-top: 25px
+        padding-left: 5px
+        
+      .contenedor-galerias
+        width: 30%
+        height: 200px
+        float: left
+        margin-left: 20px
+        background: $gris-oscuro
+        
+      .descripciones
+        padding: 20px 70px 0 0
+        float: right
+        display: block
+        p
+          font-family: $textos-font
+          color: $gris-fuente
+          font-size: 13px
+          line-height: 18px
+          margin: 0
+        a
+          color: $gris-fuente
+          text-decoration: none
+          &:before
+            content: " > "
+            color: $verde-hover
+          &:hover
+            color: $verde-hover
+        .desplegables
+          float: none
+        
+      .servicios
+        border-top: 1px dotted $verde-hover
+        display: inline-block
+        padding: 20px 0 0 0
+        margin-top: 20px
+        width: 100%
+        text-align: center
+        article
+          padding: 10px
+          float: left
+          width: 33%
+          .texto-servicio-gris
+            font-family: $titulos-font
+            color: $gris-fuente
+            font-size: 13px
+            line-height: 15px
+            margin: 0
+            padding: 5px
+            height: 50px
+             
+      .servicios-restantes 
+        width: 35%
+        float: left
+        
+        a
+          padding: 10px 10px 0 75px
+          float: left
+        p
+          font-family: $titulos-font
+          color: $gris-fuente
+          font-size: 11px
+          line-height: 13px
+          width: 20%
+          height: 100px
+          float: left
+          padding-top: 35px
