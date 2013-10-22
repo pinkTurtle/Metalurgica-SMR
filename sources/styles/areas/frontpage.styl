@@ -13,22 +13,27 @@
           text-align: center;
           background-color: white;
           height: 330px;
-          font-size: 20px
           &.currentslide
             div.desc
-              color: black
+              p
+                color: $font_white
               background-color: transparent
-              text-shadow: 1px 1px white
           img
             width: 100%;
           div.desc
-            transition: text-shadow 1s, background-color 1s, color 1s
+            p
+              transition: color 1s
+              padding-top: 200px
+              color: $font_grey
+              font-size: 35px
+              text-transform: uppercase
+              font-weight: bold
+              font-family: 'Monda', sans-serif;
+              text-align: right
+            transition: background-color 1s
             height: 100%
             width: 100%
-            color: white
-            text-shadow: 1px 1px black
             padding: 40px
-            text-align: left
             position: absolute
             background-color: rgba(0,0,0,0.6)
 

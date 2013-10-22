@@ -7,19 +7,19 @@ get_header(); ?>
       <div class="my-slider">
         <ul>
           <li>
-          <div class="desc">Imagen 1</div>
+          <div class="desc"><p>Imagen 1</p></div>
           <img src='<?php echo get_bloginfo('template_url'); ?>/slide01.jpg' />
           </li>
           <li>
-          <div class="desc">Imagen 2</div>
+          <div class="desc"><p>Imagen 2</p></div>
           <img src='<?php echo get_bloginfo('template_url'); ?>/slide02.jpg' />
           </li>
           <li>
-          <div class="desc">Imagen 3</div>
+          <div class="desc"><p>Imagen 3</p></div>
           <img src='<?php echo get_bloginfo('template_url'); ?>/slide01.jpg' />
           </li>
           <li>
-          <div class="desc">Imagen 4</div>
+          <div class="desc"><p>Imagen 4</p></div>
           <img src='<?php echo get_bloginfo('template_url'); ?>/slide02.jpg' />
           </li>
         </ul>
