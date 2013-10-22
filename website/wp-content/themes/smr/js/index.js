@@ -31,6 +31,8 @@ o(document).ready(function() {
       mySlider.prev();
     });
 
+    mySlider.goto(1);
+
     var slideTimer = window.setInterval(function(){
       mySlider.next();
     }, 7000);
