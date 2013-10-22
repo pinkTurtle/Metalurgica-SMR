@@ -15,8 +15,6 @@ o(document).ready(function() {
 
     var mySlider = new NewSlider('.my-slider');
 
-    console.log('running');
-
     lastslide.click(function(){
       mySlider.last();
     });

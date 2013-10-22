@@ -10016,6 +10016,7 @@ function NewSlider(el, opts){\n\
  */\n\
 \n\
 NewSlider.prototype.first = function(){\n\
+  this.slides.eq(this.current).removeClass(\"currentslide\");\n\
   this.goto(0);\n\
 }\n\
 \n\
@@ -10025,6 +10026,7 @@ NewSlider.prototype.first = function(){\n\
  */\n\
 \n\
 NewSlider.prototype.last = function(){\n\
+  this.slides.eq(this.current).removeClass(\"currentslide\");\n\
   this.goto(this.slides.length - 1);\n\
 }\n\
 \n\
@@ -10033,6 +10035,7 @@ NewSlider.prototype.last = function(){\n\
  */\n\
 \n\
 NewSlider.prototype.next = function(){\n\
+  this.slides.eq(this.current).removeClass(\"currentslide\");\n\
   this.goto(this.current >= (this.slides.length - 1) ? 0 : this.current + 1);\n\
 }\n\
 \n\
@@ -10041,6 +10044,7 @@ NewSlider.prototype.next = function(){\n\
  */\n\
 \n\
 NewSlider.prototype.prev = function(){\n\
+  this.slides.eq(this.current).removeClass(\"currentslide\");\n\
   this.goto((this.current <= 0 ? this.slides.length : this.current) - 1);\n\
 };\n\
 \n\
@@ -10069,6 +10073,7 @@ NewSlider.prototype.goto = function(n){\n\
 \n\
   function setCurrent(n){\n\
     self.current = n;\n\
+    self.slides.eq(n).addClass(\"currentslide\");\n\
     debug('current slide: %s', self.current);\n\
   };\n\
 \n\
