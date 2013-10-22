@@ -847,26 +847,26 @@ header nav .presionado:hover {
   padding-left: 5px;
 }
 #primary .wrapper .info .contenedor-galerias {
-  width: 30%;
+  width: 23%;
   height: 200px;
   float: left;
-  margin-left: 20px;
   background: #333;
 }
 #primary .wrapper .info .descripciones {
-  padding: 20px 70px 0 0;
+  padding: 20px 70px 0 20px;
   float: right;
   display: block;
+  width: 40%;
 }
 #primary .wrapper .info .descripciones p {
   font-family: 'Oxygen', sans-serif;
-  color: #666;
+  color: #088a4b;
   font-size: 13px;
   line-height: 18px;
   margin: 0;
 }
 #primary .wrapper .info .descripciones a {
-  color: #666;
+  color: #088a4b;
   text-decoration: none;
 }
 #primary .wrapper .info .descripciones a:before {
@@ -874,7 +874,7 @@ header nav .presionado:hover {
   color: #088a4b;
 }
 #primary .wrapper .info .descripciones a:hover {
-  color: #088a4b;
+  font-weight: 700;
 }
 #primary .wrapper .info .descripciones .desplegables {
   float: none;
