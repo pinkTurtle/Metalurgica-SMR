@@ -735,13 +735,20 @@ a.link-button-light:hover {
   -o-transition: color 1s;
   -ms-transition: color 1s;
   transition: color 1s;
-  padding-top: 200px;
+  padding-top: 180px;
   color: #7f7f7f;
   font-size: 35px;
   text-transform: uppercase;
+  width: 320px;
+  float: right;
+  display: inline-block;
+  line-height: 30px;
   font-weight: bold;
   font-family: 'Monda', sans-serif;
   text-align: right;
+}
+#main #home-primary #home-content .my-slider ul li div.desc p span {
+  font-size: 12px;
 }
 body.home div#page header#masthead .wrapper {
   height: 560px;

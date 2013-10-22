@@ -22,8 +22,10 @@ get_header(); ?>
             $url = $img[0];?>
 
             <li>
-            <div class="desc">
-            <p><?php the_title(); ?></p></div>
+              <div class="desc">
+                <p><?php the_title(); ?></p>
+                <?php //the_content(); ?>
+              </div>
               <img src="<?php echo $url; ?>" alt="SMR"/>
             </li>
 
