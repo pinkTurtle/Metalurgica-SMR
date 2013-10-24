@@ -857,13 +857,13 @@ header nav .presionado:hover {
   clear: both;
   width: 100%;
 }
-#primary .wrapper .info {
+#primary .wrapper article {
   width: 80%;
   margin: 20px auto 30px;
   padding: 0;
   background: rgba(255,255,255,0.9);
 }
-#primary .wrapper .info h1 {
+#primary .wrapper article h1 {
   background: rgba(1,1,1,0.7);
   color: #fff;
   font-family: 'Monda', sans-serif;
@@ -873,7 +873,10 @@ header nav .presionado:hover {
   padding: 10px 0 0 70px;
   height: 40px;
 }
-#primary .wrapper .info .contenido {
+#primary .wrapper article h1:before {
+  content: " / ";
+}
+#primary .wrapper article .contenido {
   font-family: 'Oxygen', sans-serif;
   color: #666;
   padding: 10px 0 20px 0;
@@ -882,11 +885,11 @@ header nav .presionado:hover {
   font-size: 15px;
   line-height: 20px;
 }
-#primary .wrapper .info .imagen-servicio {
+#primary .wrapper article .imagen-servicio {
   padding: 10px 10px 0 75px;
   float: left;
 }
-#primary .wrapper .info .texto-servicio {
+#primary .wrapper article .texto-servicio {
   font-family: 'Monda', sans-serif;
   color: #088a4b;
   font-size: 15px;
@@ -897,7 +900,7 @@ header nav .presionado:hover {
   float: left;
   width: 28%;
 }
-#primary .wrapper .info .titulo-serv {
+#primary .wrapper article .titulo-serv {
   font-family: 'Monda', sans-serif;
   font-weight: 700;
   color: #088a4b;
@@ -907,40 +910,40 @@ header nav .presionado:hover {
   padding-top: 25px;
   padding-left: 5px;
 }
-#primary .wrapper .info .contenedor-galerias {
+#primary .wrapper article .contenedor-galerias {
   width: 23%;
   height: 200px;
   float: left;
   background: #333;
 }
-#primary .wrapper .info .descripciones {
+#primary .wrapper article .descripciones {
   padding: 20px 70px 0 20px;
   float: right;
   display: block;
   width: 40%;
 }
-#primary .wrapper .info .descripciones p {
+#primary .wrapper article .descripciones p {
   font-family: 'Oxygen', sans-serif;
   color: #088a4b;
   font-size: 13px;
   line-height: 18px;
   margin: 0;
 }
-#primary .wrapper .info .descripciones a {
+#primary .wrapper article .descripciones a {
   color: #088a4b;
   text-decoration: none;
 }
-#primary .wrapper .info .descripciones a:before {
+#primary .wrapper article .descripciones a:before {
   content: " > ";
   color: #088a4b;
 }
-#primary .wrapper .info .descripciones a:hover {
+#primary .wrapper article .descripciones a:hover {
   font-weight: 700;
 }
-#primary .wrapper .info .descripciones .desplegables {
+#primary .wrapper article .descripciones .desplegables {
   float: none;
 }
-#primary .wrapper .info .servicios {
+#primary .wrapper article .servicios {
   border-top: 1px dotted #088a4b;
   display: inline-block;
   padding: 20px 0 0 0;
@@ -948,12 +951,12 @@ header nav .presionado:hover {
   width: 100%;
   text-align: center;
 }
-#primary .wrapper .info .servicios article {
+#primary .wrapper article .servicios article {
   padding: 10px;
   float: left;
   width: 33%;
 }
-#primary .wrapper .info .servicios article .texto-servicio-gris {
+#primary .wrapper article .servicios article .texto-servicio-gris {
   font-family: 'Monda', sans-serif;
   color: #666;
   font-size: 13px;
@@ -962,15 +965,15 @@ header nav .presionado:hover {
   padding: 5px;
   height: 50px;
 }
-#primary .wrapper .info .servicios-restantes {
+#primary .wrapper article .servicios-restantes {
   width: 35%;
   float: left;
 }
-#primary .wrapper .info .servicios-restantes a {
+#primary .wrapper article .servicios-restantes a {
   padding: 10px 10px 0 75px;
   float: left;
 }
-#primary .wrapper .info .servicios-restantes p {
+#primary .wrapper article .servicios-restantes p {
   font-family: 'Monda', sans-serif;
   color: #666;
   font-size: 11px;
