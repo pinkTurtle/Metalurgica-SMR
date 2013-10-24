@@ -6,7 +6,7 @@ website/wp-config.php
 website/.htaccess
 sources/styles/node_modules
 sources/javascript/components
-sources/javascript/build
+sources/javascript/build/build.js
 .DS_Store
 resources/.DS_Store
 deploy.yml
