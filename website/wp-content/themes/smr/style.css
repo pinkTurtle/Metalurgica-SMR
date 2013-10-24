@@ -246,11 +246,6 @@ hr {
   margin: 10px 0 30px;
   height: 0;
 }
-#primary #content .item > div img.valign {
-  height: 100%;
-  vertical-align: middle;
-  width: 0px;
-}
 a,
 a:visited {
   color: $links;
@@ -542,7 +537,7 @@ a.big-button,
 a.small-button {
   display: block;
   color: #fff;
-  background-color: #505050;
+  background-color: $grey-medium;
   text-transform: uppercase;
   text-decoration: none;
   position: relative;
@@ -555,8 +550,8 @@ a.small-button {
 }
 a.big-button:hover,
 a.small-button:hover {
-  background-color: #9d4900;
-  color: #ff8a00;
+  background-color: $orange-dark;
+  color: $orange-light;
 }
 a.big-button:after,
 a.small-button:after {
@@ -594,7 +589,7 @@ a.big-button:before {
   z-index: 10;
 }
 a.small-button {
-  color: #ff8a00;
+  color: $orange-light;
   padding: 0px 45px 0px 20px;
   height: 40px;
   display: inline-block;
@@ -625,8 +620,8 @@ a.menu-button span {
   line-height: 48px;
   font-size: 14px;
   line-height: 50px;
-  background-color: #505050;
-  color: #ff8a00;
+  background-color: $grey-medium;
+  color: $orange-light;
   padding-left: 20px;
   -webkit-transition: background-color 200ms ease-in;
   -moz-transition: background-color 200ms ease-in;
@@ -660,7 +655,7 @@ a.menu-button span:after {
   filter: alpha(opacity=0);
 }
 a.menu-button:hover span {
-  background-color: #9d4900;
+  background-color: $orange-dark;
 }
 a.menu-button:hover span:after {
   opacity: 1;
@@ -669,7 +664,7 @@ a.menu-button:hover span:after {
 }
 input[type="submit"].button-light,
 a.link-button-light {
-  font: normal 27px "camingodos-web-1", "camingodos-web-2", sans-serif;
+  font: normal 27px $main-font;
   text-transform: uppercase;
   background-color: rgba(255,255,255,0.5);
   color: $gray;
@@ -759,51 +754,61 @@ body.home div#page div#main {
 #main-container {
   width: 1200px;
 }
-body header div.wrapper {
+header .wrapper {
   background: rgba(1,1,1,0.5);
   padding-top: 30px;
   margin-top: 50px;
-  height: 285px;
 }
-body header div.wrapper div.container {
+header .wrapper .container {
   background: rgba(255,255,255,0.9);
   padding: 0;
   margin: 0;
   border-top: 10px solid #088a4b;
-  height: 130px;
 }
-body header div.wrapper div.container div.els-centrales {
-  margin-top: 10px;
+header .wrapper .container h2 {
+  padding-right: 10px;
+  padding-left: 10%;
+  margin: 0;
   float: left;
 }
-body header div.wrapper div.container nav {
+header .wrapper .container .els-centrales {
+  float: left;
+}
+header .wrapper .container .els-centrales h3 {
+  color: #0b243b;
+  font-family: 'Monda', sans-serif;
+  font-size: 25px;
+  font-weight: 700;
+  margin: 0;
+  padding-top: 35px;
+  letter-spacing: -1px;
+}
+header .wrapper .container .els-centrales h4 {
+  color: #666;
+  margin: -7px 0 0 0;
+  font-family: 'Monda', sans-serif;
+  font-size: 25px;
+  line-height: 40px;
+  letter-spacing: -1px;
+  font-weight: 300;
+}
+header .wrapper .container:after {
+  content: "";
+  clear: both;
+  width: 100%;
+}
+header nav {
   float: right;
   padding-right: 10%;
-  padding-top: 18px;
+  padding-top: 25px;
 }
-body header div.wrapper div.container nav div.menu-smr-menu-container ul {
+header nav ul {
   list-style: none;
   color: #666;
   margin: 0;
   padding: 0;
 }
-body header div.wrapper div.container nav div.menu-smr-menu-container ul a {
-  text-decoration: none;
-  color: #666;
-  -webkit-transition: all 200ms ease-out;
-  -moz-transition: all 200ms ease-out;
-  -o-transition: all 200ms ease-out;
-  -ms-transition: all 200ms ease-out;
-  transition: all 200ms ease-out;
-}
-body header div.wrapper div.container nav div.menu-smr-menu-container ul a:hover {
-  text-decoration: none;
-  color: #088a4b;
-  opacity: 0.5;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
-  filter: alpha(opacity=50);
-}
-body header div.wrapper div.container nav div.menu-smr-menu-container ul li {
+header nav ul li {
   color: #666;
   font-family: 'Monda', sans-serif;
   font-weight: 300;
@@ -811,62 +816,174 @@ body header div.wrapper div.container nav div.menu-smr-menu-container ul li {
   list-style: none;
   text-align: left;
   text-decoration: none;
-  height: 24px;
 }
-body header div.wrapper div.container nav div.menu-smr-menu-container ul li:before {
+header nav ul li:before {
   content: " / ";
   color: #088a4b;
 }
-body header div.wrapper div.container nav div.menu-smr-menu-container ul li a {
-  text-transform: uppercase;
+header nav ul li a {
+  text-decoration: none;
+  color: #666;
+  -webkit-transition: all 200ms ease-out;
 }
-body header div.wrapper div.container h1 {
-  padding-right: 10px;
-  padding-left: 10%;
-  margin: 0;
-  float: left;
+header nav ul li a:hover {
+  text-decoration: none;
+  color: #088a4b;
+  opacity: 0.5;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  filter: alpha(opacity=50);
 }
-body header div.wrapper div.container h1 a img {
-  margin-top: 7px;
+header nav .presionado {
+  background: #088a4b;
+  color: #fff;
+  display: inline-block;
+  width: 80px;
+  padding-left: 5px;
 }
-div#main div#primary div#content article div.subcontent {
-  position: relative;
+header nav .presionado:hover {
+  background: #088a4b;
+  color: #fff;
+  opacity: 1;
+  -ms-filter: none;
+  filter: none;
+}
+#primary .wrapper {
+  border-top: solid 100px rgba(1,1,1,0.5);
+}
+#primary .wrapper hr {
+  height: 20px;
+  background: #088a4b;
   width: 80%;
-  margin: -55px auto 0px;
-  padding: 0;
-  background: rgba(255,255,255,0.8);
+  margin: -80px auto 0;
+  border: 0;
 }
-div#main div#primary div#content article div.subcontent h1 {
-  text-transform: uppercase;
+#primary .wrapper:after {
+  content: "";
+  clear: both;
+  width: 100%;
+}
+#primary .wrapper .info {
+  width: 80%;
+  margin: 20px auto 30px;
+  padding: 0;
+  background: rgba(255,255,255,0.9);
+}
+#primary .wrapper .info h1 {
   background: rgba(1,1,1,0.7);
   color: #fff;
   font-family: 'Monda', sans-serif;
   font-size: 20px;
   font-weight: 300;
   margin: 0;
-  height: 55px;
-  line-height: 55px;
-  padding-left: 50px;
+  padding: 10px 0 0 70px;
+  height: 40px;
 }
-div#main div#primary div#content article div.subcontent h1:before {
-  content: "/ ";
-}
-div#main div#primary div#content article div.subcontent p {
+#primary .wrapper .info .contenido {
   font-family: 'Oxygen', sans-serif;
-  color: #333;
-  padding: 30px 50px;
-  margin: 0;
+  color: #666;
+  padding: 10px 0 20px 0;
+  margin: 0 70px;
   text-align: justify;
   font-size: 15px;
   line-height: 20px;
 }
-div#main div#primary div#content article div.subcontent:after {
-  position: absolute;
-  top: -32px;
-  content: " ";
-  border-top: 20px solid #088a4b;
-  width: 100%;
+#primary .wrapper .info .imagen-servicio {
+  padding: 10px 10px 0 75px;
+  float: left;
+}
+#primary .wrapper .info .texto-servicio {
+  font-family: 'Monda', sans-serif;
+  color: #088a4b;
+  font-size: 15px;
+  line-height: 18px;
+  margin: 0;
+  padding-top: 25px;
+  padding-left: 5px;
+  float: left;
+  width: 28%;
+}
+#primary .wrapper .info .titulo-serv {
+  font-family: 'Monda', sans-serif;
+  font-weight: 700;
+  color: #088a4b;
+  font-size: 15px;
+  line-height: 18px;
+  margin: 0;
+  padding-top: 25px;
+  padding-left: 5px;
+}
+#primary .wrapper .info .contenedor-galerias {
+  width: 23%;
+  height: 200px;
+  float: left;
+  background: #333;
+}
+#primary .wrapper .info .descripciones {
+  padding: 20px 70px 0 20px;
+  float: right;
   display: block;
+  width: 40%;
+}
+#primary .wrapper .info .descripciones p {
+  font-family: 'Oxygen', sans-serif;
+  color: #088a4b;
+  font-size: 13px;
+  line-height: 18px;
+  margin: 0;
+}
+#primary .wrapper .info .descripciones a {
+  color: #088a4b;
+  text-decoration: none;
+}
+#primary .wrapper .info .descripciones a:before {
+  content: " > ";
+  color: #088a4b;
+}
+#primary .wrapper .info .descripciones a:hover {
+  font-weight: 700;
+}
+#primary .wrapper .info .descripciones .desplegables {
+  float: none;
+}
+#primary .wrapper .info .servicios {
+  border-top: 1px dotted #088a4b;
+  display: inline-block;
+  padding: 20px 0 0 0;
+  margin-top: 20px;
+  width: 100%;
+  text-align: center;
+}
+#primary .wrapper .info .servicios article {
+  padding: 10px;
+  float: left;
+  width: 33%;
+}
+#primary .wrapper .info .servicios article .texto-servicio-gris {
+  font-family: 'Monda', sans-serif;
+  color: #666;
+  font-size: 13px;
+  line-height: 15px;
+  margin: 0;
+  padding: 5px;
+  height: 50px;
+}
+#primary .wrapper .info .servicios-restantes {
+  width: 35%;
+  float: left;
+}
+#primary .wrapper .info .servicios-restantes a {
+  padding: 10px 10px 0 75px;
+  float: left;
+}
+#primary .wrapper .info .servicios-restantes p {
+  font-family: 'Monda', sans-serif;
+  color: #666;
+  font-size: 11px;
+  line-height: 13px;
+  width: 20%;
+  height: 100px;
+  float: left;
+  padding-top: 35px;
 }
 div#footer .wrap {
   font: normal 14px/21px $menu;
@@ -900,21 +1017,4 @@ body * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-}
-body h3 {
-  text-transform: uppercase;
-  color: #0b243b;
-  font-family: 'Monda', sans-serif;
-  font-size: 20px;
-  font-weight: 700;
-  margin: 0;
-  padding-top: 25px;
-  letter-spacing: -1px;
-}
-body h4 {
-  text-transform: uppercase;
-  color: #666;
-  font-family: 'Monda', sans-serif;
-  font-size: 20px;
-  letter-spacing: -1px;
 }
