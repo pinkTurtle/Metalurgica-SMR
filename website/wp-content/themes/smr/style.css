@@ -759,7 +759,7 @@ header .wrapper .container {
   margin: 0;
   border-top: 10px solid #088a4b;
 }
-header .wrapper .container h2 {
+header .wrapper .container h1 {
   padding-right: 10px;
   padding-left: 10%;
   margin: 0;
@@ -790,6 +790,7 @@ header .wrapper .container:after {
   content: "";
   clear: both;
   width: 100%;
+  display: block;
 }
 header nav {
   float: right;
