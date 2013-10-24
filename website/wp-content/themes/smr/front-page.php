@@ -1,8 +1,6 @@
 <?php
 get_header(); ?>
 
-  <div id="home-primary" class="home-content-area">
-    <div id="home-content" class="front-content" role="main">
 
       <div class="my-slider">
         <ul id="slides">
@@ -36,7 +34,11 @@ get_header(); ?>
           wp_reset_postdata();
           ?><!--fin init slides aleatorios -->
         </ul><!-- fin slides -->
-      </div><!-- fin container -->
+      </div><!-- fin my-slider -->
+
+  <main id="frontpage primary" class="home-content-area">
+    <div id="home-content" class="front-content" role="main">
 
     </div><!-- #content -->
-  </div><!-- #primary -->
+  </main><!-- #primary -->
+<?php get_footer(); ?>
