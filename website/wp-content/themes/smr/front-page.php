@@ -36,7 +36,18 @@ get_header(); ?>
 </div><!-- fin my-slider -->
 
 <main id="frontpage primary" class="home-content-area">
-  <div id="frontpage content" class="front-content" role="main">
+  <div id="frontpage content" class="wrapper front-content" role="main">
+
+  <?php if ( have_posts() ) : ?>
+
+    <?php /* The loop */ ?>
+    <?php while ( have_posts() ) : the_post(); ?>
+      <?php get_template_part( 'content', get_post_format() ); ?>
+    <?php endwhile; ?>
+
+  <?php else : ?>
+    <?php get_template_part( 'content', 'none' ); ?>
+  <?php endif; ?>
 
   </div><!-- #content -->
 </main><!-- #primary -->
