@@ -745,12 +745,6 @@ a.link-button-light:hover {
 .my-slider ul li div.desc p span {
   font-size: 12px;
 }
-body.home div#page header#masthead .wrapper {
-  height: 560px;
-}
-body.home div#page div#main {
-  margin-top: -400px;
-}
 #main-container {
   width: 1200px;
 }
