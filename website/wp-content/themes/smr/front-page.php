@@ -35,8 +35,8 @@ get_header(); ?>
   </ul><!-- fin slides -->
 </div><!-- fin my-slider -->
 
-<main id="frontpage primary" class="home-content-area">
-  <div id="frontpage content" class="wrapper front-content" role="main">
+<main id="primary" class="home-content-area">
+  <div id="content" class="wrapper front-content" role="main">
 
   <?php if ( have_posts() ) : ?>
 
