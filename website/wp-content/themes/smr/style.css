@@ -690,6 +690,72 @@ a.link-button-light:hover {
   background-color: rgba(255,255,255,0.3);
 }
 /* areas */
+#main #home-primary #home-content .my-slider {
+  width: 100%;
+  height: 330px;
+}
+#main #home-primary #home-content .my-slider ul {
+  -webkit-transition: left 1s;
+  -moz-transition: left 1s;
+  -o-transition: left 1s;
+  -ms-transition: left 1s;
+  transition: left 1s;
+}
+#main #home-primary #home-content .my-slider ul li {
+  position: relative;
+  width: 890px;
+  text-align: center;
+  background-color: #fff;
+  height: 330px;
+}
+#main #home-primary #home-content .my-slider ul li.currentslide div.desc {
+  background-color: transparent;
+}
+#main #home-primary #home-content .my-slider ul li.currentslide div.desc p {
+  color: #feffff;
+}
+#main #home-primary #home-content .my-slider ul li img {
+  width: 100%;
+}
+#main #home-primary #home-content .my-slider ul li div.desc {
+  -webkit-transition: background-color 1s;
+  -moz-transition: background-color 1s;
+  -o-transition: background-color 1s;
+  -ms-transition: background-color 1s;
+  transition: background-color 1s;
+  height: 100%;
+  width: 100%;
+  padding: 40px;
+  position: absolute;
+  background-color: rgba(0,0,0,0.6);
+}
+#main #home-primary #home-content .my-slider ul li div.desc p {
+  -webkit-transition: color 1s;
+  -moz-transition: color 1s;
+  -o-transition: color 1s;
+  -ms-transition: color 1s;
+  transition: color 1s;
+  padding-top: 180px;
+  color: #7f7f7f;
+  font-size: 35px;
+  text-transform: uppercase;
+  width: 320px;
+  float: right;
+  display: inline-block;
+  line-height: 30px;
+  font-weight: bold;
+  font-family: 'Monda', sans-serif;
+  text-align: right;
+}
+#main #home-primary #home-content .my-slider ul li div.desc p span {
+  font-size: 12px;
+}
+body.home div#page header#masthead .wrapper {
+  height: 560px;
+}
+body.home div#page div#main {
+  margin-top: -400px;
+}
 #main-container {
   width: 1200px;
 }
@@ -804,6 +870,25 @@ div#main div#primary div#content article div.subcontent:after {
 }
 div#footer .wrap {
   font: normal 14px/21px $menu;
+}
+/* Component */
+.newslider-viewport {
+  margin: 0px;
+  position: relative;
+  overflow: hidden;
+}
+.newslider-viewport .newslider-wrapper {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  left: 0;
+}
+.newslider-viewport .newslider-wrapper > * {
+  display: inline-block;
+  list-style: none;
+  vertical-align: top;
+  float: left;
 }
 body {
   background: url("images/fondo.jpg") no-repeat center top;

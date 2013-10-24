@@ -20,6 +20,7 @@ local-update:
 	`cat data/metalsmr_database.sql | sed 's/metalurgica-smr.com.ar/localhost\/metalurgica-smr/g' > data/local.sql`
 
 css:
+	cp sources/javascript/build/build.css sources/javascript/build/build.styl
 	stylus sources/styles/style.styl -o $(WP_THEME)
 
 js:

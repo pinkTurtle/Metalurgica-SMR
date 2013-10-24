@@ -133,4 +133,23 @@ add_action( 'admin_menu', 'my_remove_menu_pages' );
 add_theme_support( 'post-thumbnails', array( 'page' ) );          // Pages only
 */
 show_admin_bar(false);
+
+add_theme_support('post-thumbnails', array('page', 'imgslides')); 
+
+add_action( 'init', 'create_post_type' );
+function create_post_type() {
+  register_post_type( 'imgslides',
+    array(
+      'labels' => array(
+        'name' => __( 'Slides' ),
+        'singular_name' => __( 'Slide' )
+      ),
+      'public' => true,
+      'has_archive' => true,
+      'rewrite' => array('slug' => 'slides'),
+      'supports' => array('title','thumbnail','editor')
+    )
+  );
+}
+
 ?>

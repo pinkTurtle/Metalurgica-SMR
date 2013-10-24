@@ -1,0 +1,17 @@
+{
+  "name": "main",
+  "repo": "Juan-Facundo/main",
+  "description": "Archivo javascript compilado para el theme de wordpress",
+  "version": "0.0.1",
+  "keywords": [],
+  "dependencies": {
+    "component/jquery": "*",
+    "visionmedia/debug": "*",
+    "pinkTurtle/newslider": "*"
+  },
+  "development": {},
+  "license": "MIT",
+  "scripts": [
+    "index.js"
+  ]
+}
