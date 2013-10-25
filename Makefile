@@ -19,6 +19,10 @@ html:
 local-update:
 	`cat data/metalsmr_database.sql | sed 's/metalurgica-smr.com.ar/localhost\/metalurgica-smr/g' > data/local.sql`
 
+db-update:
+	mysqldump -u root -pfackin --opt metalsmr_mysql > data/dump.sql
+	`cat data/dump.sql | sed 's/localhost\/metalurgica-smr/metalurgica-smr.com.ar/g' > data/production.sql`
+
 css:
 	cp sources/javascript/build/build.css sources/javascript/build/build.styl
 	stylus sources/styles/style.styl -o $(WP_THEME)
