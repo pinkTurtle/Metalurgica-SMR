@@ -133,22 +133,13 @@ table {
   border-spacing: 0;
 }
 /* commons */
-body {
-  font: normal 12px/21px $regular;
-  color: $text_color;
-  -webkit-font-smoothing: antialiased;
-/* Fix for webkit rendering */
-  regular-webkit-text-size-adjust: 100%;
-  background-color: $darkgray;
-}
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font: normal 12px/21px $title;
-  color: $text_color;
+  font: normal 12px/25px 'Monda', sans-serif;
   line-height: 1em;
 }
 h1 a,
@@ -160,26 +151,16 @@ h6 a {
   font-weight: inherit;
 }
 h1 {
-  font-size: 24px;
-  margin-bottom: 14px;
-}
-h2 {
-  font-size: 22px;
-  margin-bottom: 10px;
+  font-size: 20px;
+  margin: 0;
 }
 h3 {
-  font-size: 20px;
-  margin-bottom: 8px;
+  font-size: 25px;
+  margin: 0;
 }
 h4 {
-  font-size: 18px;
-  margin-bottom: 4px;
-}
-h5 {
-  font-size: 16px;
-}
-h6 {
-  font-size: 14px;
+  font-size: 25px;
+  margin: -7px 0 0 0;
 }
 p,
 span {
@@ -199,7 +180,7 @@ em {
 }
 strong {
   font-weight: bold;
-  color: #333;
+  color: #088a4b;
 }
 small {
   font-size: 80%;
@@ -241,10 +222,11 @@ blockquote cite a:visited {
   color: #555;
 }
 hr {
-  border-top: 10px solid #088a4b;
-  clear: both;
-  margin: 10px 0 30px;
-  height: 0;
+  height: 20px;
+  background: #088a4b;
+  width: 80%;
+  margin: -80px auto 0;
+  border: 0;
 }
 a,
 a:visited {
@@ -759,7 +741,7 @@ header .wrapper .container {
   margin: 0;
   border-top: 10px solid #088a4b;
 }
-header .wrapper .container h1 {
+header .wrapper .container .site-header {
   padding-right: 10px;
   padding-left: 10%;
   margin: 0;
@@ -879,26 +861,29 @@ header nav .presionado:hover {
 #primary .wrapper article .contenido {
   font-family: 'Oxygen', sans-serif;
   color: #666;
-  padding: 10px 0 20px 0;
-  margin: 0 70px;
+  padding: 10px 70px 20px 70px;
+  margin: 0;
   text-align: justify;
   font-size: 15px;
   line-height: 20px;
 }
-#primary .wrapper article .imagen-servicio {
-  padding: 10px 10px 0 75px;
-  float: left;
-}
-#primary .wrapper article .texto-servicio {
+#primary .wrapper article .texto-servicio a {
   font-family: 'Monda', sans-serif;
   color: #088a4b;
+  text-decoration: none;
   font-size: 15px;
   line-height: 18px;
   margin: 0;
   padding-top: 25px;
   padding-left: 5px;
   float: left;
-  width: 28%;
+  width: 30%;
+}
+#primary .wrapper article .texto-servicio a:visited {
+  color: #088a4b;
+}
+#primary .wrapper article .texto-servicio a:hover {
+  font-weight: 700;
 }
 #primary .wrapper article .titulo-serv {
   font-family: 'Monda', sans-serif;
@@ -908,7 +893,6 @@ header nav .presionado:hover {
   line-height: 18px;
   margin: 0;
   padding-top: 25px;
-  padding-left: 5px;
 }
 #primary .wrapper article .contenedor-galerias {
   width: 23%;
@@ -917,19 +901,17 @@ header nav .presionado:hover {
   background: #333;
 }
 #primary .wrapper article .descripciones {
-  padding: 20px 70px 0 20px;
+  padding: 20px 0px 0 20px;
   float: right;
   display: block;
   width: 40%;
-}
-#primary .wrapper article .descripciones p {
-  font-family: 'Oxygen', sans-serif;
-  color: #088a4b;
-  font-size: 13px;
-  line-height: 18px;
-  margin: 0;
+  text-align: left;
 }
 #primary .wrapper article .descripciones a {
+  font-size: 15px;
+  line-height: 18px;
+  margin: 0;
+  font-family: 'Monda', sans-serif;
   color: #088a4b;
   text-decoration: none;
 }
@@ -951,37 +933,91 @@ header nav .presionado:hover {
   width: 100%;
   text-align: center;
 }
-#primary .wrapper article .servicios article {
-  padding: 10px;
-  float: left;
-  width: 33%;
+#primary .wrapper article .servicios ul {
+  list-style: none;
 }
-#primary .wrapper article .servicios article .texto-servicio-gris {
+#primary .wrapper article .servicios ul li {
+  color: #666;
+  text-align: left;
+  text-decoration: none;
+  display: inline-block;
+  width: 200px;
+}
+#primary .wrapper article .servicios ul li a {
   font-family: 'Monda', sans-serif;
   color: #666;
+  text-decoration: none;
   font-size: 13px;
   line-height: 15px;
   margin: 0;
-  padding: 5px;
+  padding: 0;
   height: 50px;
+}
+#primary .wrapper article .servicios ul li a:visited {
+  color: #666;
 }
 #primary .wrapper article .servicios-restantes {
   width: 35%;
   float: left;
 }
 #primary .wrapper article .servicios-restantes a {
-  padding: 10px 10px 0 75px;
-  float: left;
-}
-#primary .wrapper article .servicios-restantes p {
   font-family: 'Monda', sans-serif;
   color: #666;
   font-size: 11px;
   line-height: 13px;
   width: 20%;
   height: 100px;
-  float: left;
   padding-top: 35px;
+  padding: 10px 10px 0 0;
+  display: inline-block;
+}
+#primary .wrapper article .contacto {
+  width: 50%;
+  float: left;
+}
+#primary .wrapper article .mapa {
+  width: 50%;
+  height: 250px;
+  float: left;
+  background: #666;
+}
+#primary .wrapper article .clientes {
+  width: 45%;
+  float: left;
+  margin-right: 25px;
+  text-align: left;
+}
+#primary .wrapper article .clientes .logo-cliente {
+  height: 70px;
+  width: 70px;
+  background: #666;
+  float: left;
+  margin-right: 10px;
+}
+#primary .wrapper article .clientes .titulo-clientes a {
+  font-family: 'Monda', sans-serif;
+  font-weight: 700;
+  color: #088a4b;
+  font-size: 15px;
+  line-height: 18px;
+  margin: 0;
+}
+#primary .wrapper article .clientes .titulo-clientes a:hover {
+  font-weight: 700;
+}
+#primary .wrapper article .clientes .titulo-clientes a:visited {
+  color: #088a4b;
+}
+#primary .wrapper article .clientes-individual {
+  float: left;
+  width: 100%;
+}
+#primary .wrapper article .clientes-individual .galeria-cliente {
+  height: 250px;
+  width: 400px;
+  background: #666;
+  float: left;
+  margin: 25px 25px 0 0;
 }
 div#footer .wrap {
   font: normal 14px/21px $menu;
