@@ -1,37 +1,25 @@
 /*
 #Basic Styles
 ================================================== */
-body
-  font: normal 12px/21px $regular
-  color: $text_color
-  -webkit-font-smoothing antialiased /* Fix for webkit rendering */
-  regular-webkit-text-size-adjust 100%
-  background-color: $darkgray
+
+  
 
 /* #Typography
 ================================================== */
 h1, h2, h3, h4, h5, h6 
-  font: normal 12px/21px $title
-  color: $text_color
+  font: normal 12px/25px $titulos-font
   line-height: 1em
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a 
   font-weight: inherit;
 h1 
-  font-size: 24px
-  margin-bottom: 14px
-h2 
-  font-size: 22px
-  margin-bottom: 10px
-h3 
   font-size: 20px
-  margin-bottom: 8px
+  margin: 0
+h3 
+  font-size: 25px
+  margin: 0
 h4 
-  font-size: 18px
-  margin-bottom: 4px
-h5 
-  font-size: 16px
-h6 
-  font-size: 14px
+  font-size: 25px
+  margin: -7px 0 0 0
 p 
 span
   color: $text_color
@@ -43,7 +31,7 @@ p.lead
 em 
   font-style: italic; 
 strong
-  font-weight: bold; color: #333;
+  font-weight: bold; color: $verde-hover;
 small 
   font-size: 80%
 iframe
@@ -75,11 +63,11 @@ blockquote cite:before { content: "\2014 \0020"; }
 blockquote cite a, blockquote cite a:visited, blockquote cite a:visited { color: #555; }
 
 hr
-  border-top: 10px solid #088a4b;
-  clear: both
-  margin: 10px 0 30px
-  height: 0
-
+  height: 20px
+  background: $verde-hover
+  width: 80%
+  margin: -80px auto 0
+  border: 0
 
 
 /* #Links
