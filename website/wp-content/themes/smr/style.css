@@ -1022,6 +1022,31 @@ header nav .presionado:hover {
 div#footer .wrap {
   font: normal 14px/21px $menu;
 }
+.content-gallery {
+  width: 600px;
+  height: 300px;
+  margin: 0px auto !important;
+}
+.content-gallery div {
+  -webkit-transition: left 1s;
+  -moz-transition: left 1s;
+  -o-transition: left 1s;
+  -ms-transition: left 1s;
+  transition: left 1s;
+}
+.content-gallery div div {
+  max-width: 600px;
+  height: 300px;
+  float: left;
+}
+.content-gallery div div a {
+  width: 100%;
+  height: 100%;
+}
+.content-gallery div div a img {
+  width: auto;
+  height: 100%;
+}
 /* Component */
 .newslider-viewport {
   margin: 0px;
