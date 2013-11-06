@@ -2,7 +2,7 @@
 <?php
 /**
  *
- * Template Name: smr test page
+ * Template Name: SMR Clientes
  * @package WordPress
  * @subpackage smr
  * @since Twenty Thirteen
@@ -10,21 +10,44 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<div id="content" class="site-content" role="main">
-		<?php if ( have_posts() ) : ?>
+  <div id="primary" class="content-area">
+    <div id="content" class="wrapper site-content" role="main">
+    <?php if ( have_posts() ) : ?>
 
-			<?php /* The loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
-				<?php get_template_part( 'content', get_post_format() ); ?>
-			<?php endwhile; ?>
+      <?php /* The loop */ ?>
+      <?php while ( have_posts() ) : the_post(); ?>
+        <hr />
+        <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-		<?php else : ?>
-			<?php get_template_part( 'content', 'none' ); ?>
-		<?php endif; ?>
+          <h1>
+            <?php the_title(); ?>
+          </h1>
+          <div class="contenido">
+            <div class="clientes-individual">
+              <div class="titulo-serv">
+                <?php the_title(); ?>
+              </div>
+                <strong>
+                <?php $ubicacion = simple_fields_value('ubicacion'); ?>
+                <?php echo $ubicacion; ?>
+                </strong>
 
-		</div><!-- #content -->
-	</div><!-- #primary -->
+              <div class="cliente-contenido">
+                <br />
+                <?php the_content(); ?>
+              </div>
+            </div>
+          </div>
+          <div class="clear"></div>
+          <footer class="entry-meta">
+          </footer><!-- .entry-meta -->
+        </article><!-- #post -->
+      <?php endwhile; ?>
+
+    <?php endif; ?>
+
+    </div><!-- #content -->
+  </div><!-- #primary -->
 
 <?php //get_sidebar(); ?>
 <?php get_footer(); ?>
