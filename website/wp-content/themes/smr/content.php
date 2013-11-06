@@ -49,8 +49,9 @@
     <div id="bloque-<?php echo $lh->ID; ?>" class="<?php echo $clase_hija.' '.$lb_slug.' '.$lb_class; ?>">
       <div class="logo-cliente">
         <?php if (has_post_thumbnail($lh->ID)) : ?> 
-          <?php $featured_image = get_the_post_thumbnail($lh->ID, array(70,70)) ?> 
-          <?php echo $featured_image; ?>
+        <a href="<?php echo $lb_link; ?>">
+          <?php echo get_the_post_thumbnail($lh->ID, thumbnail); ?>
+        </a>
         <?php endif; ?>
       </div>
       <div class="titulo-clientes">

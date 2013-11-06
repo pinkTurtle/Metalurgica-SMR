@@ -983,6 +983,7 @@ header nav .presionado:hover {
   float: left;
   margin-right: 25px;
   text-align: left;
+  height: 100px;
 }
 #primary .wrapper article .clientes .logo-cliente {
   height: 70px;
@@ -990,6 +991,10 @@ header nav .presionado:hover {
   background: #666;
   float: left;
   margin-right: 10px;
+}
+#primary .wrapper article .clientes .logo-cliente img {
+  width: 100%;
+  height: 100%;
 }
 #primary .wrapper article .clientes .titulo-clientes a {
   font-family: 'Monda', sans-serif;
