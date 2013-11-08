@@ -16,10 +16,14 @@
   </h1>
   <div class="contenido">
     <?php the_content(); ?>
+<?php
+global $wp_query;
+$post_id = $wp_query->post->ID;
+$post = get_post( $post_id );
+$slug = $post->post_name;
+?>
 
-<?php $clase_hija = strtolower(get_the_title()); ?>
 <!--paginas hijas-->
-
   <?php /* Pages level [1] */?>
   <?php $argumentos = array(
     'sort_order' => 'ASC',
@@ -46,7 +50,7 @@
       <?php $str_class .= $cl . ' '; ?>
     <?php endforeach; ?>
 
-    <div id="bloque-<?php echo $lh->ID; ?>" class="<?php echo $clase_hija.' '.$lb_slug.' '.$lb_class; ?>">
+    <div id="bloque-<?php echo $lh->ID; ?>" class="<?php echo $slug.' '.$lb_slug.' '.$lb_class; ?>">
       <div class="logo-cliente">
         <?php if (has_post_thumbnail($lh->ID)) : ?> 
         <a href="<?php echo $lb_link; ?>">
