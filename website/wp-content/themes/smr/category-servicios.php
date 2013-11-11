@@ -16,17 +16,17 @@
 
 get_header(); ?>
 
-	<main id="primary" class="content-area">
-		<div id="content no-servicios" class="wrapper site-content" role="main">
+	<main id="primary" class="by-category content-area">
+		<div id="content" class="wrapper site-content" role="main">
 		<?php if ( have_posts() ) : ?>
 
 			<?php /* The loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
-				<?php get_template_part( 'content', get_post_format() ); ?>
+				<?php get_template_part( 'content-servicios', get_post_format() ); ?>
 			<?php endwhile; ?>
 
 		<?php else : ?>
-			<?php get_template_part( 'content', 'none' ); ?>
+			<?php get_template_part( 'content-servicios', 'none' ); ?>
 		<?php endif; ?>
 
 		</div><!-- #content -->

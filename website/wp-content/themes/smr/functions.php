@@ -168,4 +168,11 @@ function nggGetGallery( $galleryID, $template = '', $images = false ) {
     return $picturelist;
 }
 
+function smr_plugin_settings() {  
+// Add category metabox to page
+register_taxonomy_for_object_type('category', 'page');  
+}
+ // Add to the admin_init hook of your theme functions.php file 
+add_action( 'admin_init', 'smr_plugin_settings' );
+
 ?>
