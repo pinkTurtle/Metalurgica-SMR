@@ -922,7 +922,7 @@ header nav .presionado:hover {
 #primary .wrapper article .descripciones .desplegables {
   float: none;
 }
-#primary .wrapper article .servicios {
+#primary .wrapper article .smr-servicios {
   border-top: 1px dotted #088a4b;
   display: inline-block;
   padding: 20px 0 0 0;
@@ -930,17 +930,17 @@ header nav .presionado:hover {
   width: 100%;
   text-align: center;
 }
-#primary .wrapper article .servicios ul {
+#primary .wrapper article .smr-servicios ul {
   list-style: none;
 }
-#primary .wrapper article .servicios ul li {
+#primary .wrapper article .smr-servicios ul li {
   color: #666;
   text-align: left;
   text-decoration: none;
   display: inline-block;
   width: 200px;
 }
-#primary .wrapper article .servicios ul li a {
+#primary .wrapper article .smr-servicios ul li a {
   font-family: 'Monda', sans-serif;
   color: #666;
   text-decoration: none;
@@ -950,7 +950,7 @@ header nav .presionado:hover {
   padding: 0;
   height: 50px;
 }
-#primary .wrapper article .servicios ul li a:visited {
+#primary .wrapper article .smr-servicios ul li a:visited {
   color: #666;
 }
 #primary .wrapper article .servicios-restantes {
