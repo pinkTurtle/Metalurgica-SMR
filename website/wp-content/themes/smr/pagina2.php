@@ -55,10 +55,11 @@ get_header(); ?>
           <?php endforeach; ?>
 
           <div id="bloque-<?php echo $lh->ID; ?>" class="<?php echo 'servicios '.$lb_slug.' '.$lb_class; ?>">
-            <div class="titulo-clientes">
-              <a href="<?php echo $lb_link; ?>">
-                    <?php echo $lh->post_title; ?>
-              </a>
+            <div class="titulo-servicios">
+              <strong><?php echo $lh->post_title; ?></strong>
+            </div>
+            <div class="contenido-servicios">
+              <?php echo $lh->post_content; ?>
             </div>
           </div>
         <?php endforeach; ?>

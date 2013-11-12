@@ -862,6 +862,7 @@ header nav .presionado:hover {
   text-align: justify;
   font-size: 15px;
   line-height: 20px;
+  position: relative;
 }
 #primary .wrapper article .texto-servicio a {
   font-family: 'Monda', sans-serif;
@@ -891,11 +892,14 @@ header nav .presionado:hover {
   padding-top: 25px;
 }
 #primary .wrapper article .contenedor-galerias {
+  position: absolute;
   width: 250px;
   height: 200px;
   float: left;
   background: #333;
   overflow: hidden;
+  top: 140px;
+  left: 36%;
 }
 #primary .wrapper article .descripciones {
   padding: 20px 0px 0 20px;
@@ -1020,6 +1024,16 @@ header nav .presionado:hover {
   background: #666;
   float: left;
   margin: 25px 25px 0 0;
+}
+.descripciones .servicios {
+  -webkit-transition: height 1s;
+  -moz-transition: height 1s;
+  -o-transition: height 1s;
+  -ms-transition: height 1s;
+  transition: height 1s;
+}
+.descripciones .servicios div.contenido-servicios {
+  display: none;
 }
 div#footer .wrap {
   font: normal 14px/21px $menu;

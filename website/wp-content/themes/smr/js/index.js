@@ -38,4 +38,9 @@ o(document).ready(function() {
     }, 7000);
   }
 
+    o(".descripciones .servicios").click(function() {
+        o('.descripciones .servicios .contenido-servicios').slideUp( "slow" );
+        o(this).find('.contenido-servicios').slideDown( "slow" );
+    });
+
 });

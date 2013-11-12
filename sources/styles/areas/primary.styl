@@ -37,6 +37,7 @@
         text-align: justify
         font-size: 15px
         line-height: 20px
+        position: relative
 
       .texto-servicio
         a
@@ -65,11 +66,14 @@
         padding-top: 25px
                 
       .contenedor-galerias
+        position: absolute
         width: 250px
         height: 200px
         float: left
         background: $gris-oscuro
         overflow: hidden
+        top: 140px
+        left: 36%
         
       .descripciones
         padding: 20px 0px 0 20px
@@ -180,6 +184,7 @@
           float: left
           margin: 25px 25px 0 0
 
-          
-
-          
+.descripciones .servicios
+  transition: height 1s
+  div.contenido-servicios
+    display: none
