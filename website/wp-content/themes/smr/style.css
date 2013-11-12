@@ -1025,12 +1025,8 @@ header nav .presionado:hover {
   float: left;
   margin: 25px 25px 0 0;
 }
-.descripciones .servicios {
-  -webkit-transition: height 1s;
-  -moz-transition: height 1s;
-  -o-transition: height 1s;
-  -ms-transition: height 1s;
-  transition: height 1s;
+.descripciones .servicios strong {
+  cursor: pointer;
 }
 .descripciones .servicios div.contenido-servicios {
   display: none;
