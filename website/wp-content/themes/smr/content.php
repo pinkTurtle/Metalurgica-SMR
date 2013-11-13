@@ -17,7 +17,9 @@
   <div class="contenido">
     <?php the_content(); ?>
   </div>
-
+  <?php if(is_page('servicios')) : ?> 
+    <?php get_template_part( 'menu-servicios-root', get_post_format() ); ?>
+  <?php endif; ?>
 	<footer class="entry-meta">
 	</footer><!-- .entry-meta -->
 </article><!-- #post -->

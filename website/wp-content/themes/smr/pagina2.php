@@ -20,10 +20,11 @@ get_header(); ?>
 
 
   <h1>
-    <?php the_title(); ?>
+    Servicios
   </h1>
 
   <div class="contenido">
+
 
     <div class="logo-servicio">
       <?php if (has_post_thumbnail()) : ?> 
@@ -32,6 +33,10 @@ get_header(); ?>
       </a>
       <?php endif; ?>
     </div>
+
+  <h2>
+    <?php the_title(); ?>
+  </h2>
 
     <?php the_content(); ?>
 
