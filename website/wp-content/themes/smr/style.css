@@ -1065,6 +1065,8 @@ header nav .presionado:hover {
 }
 .descripciones .servicios div.contenido-servicios .my-slider.album-lightbox.ngg-albumoverview {
   position: absolute;
+  top: 170px;
+  left: 350px;
 }
 .logo-servicio {
   width: 110px;
@@ -1144,10 +1146,6 @@ div#footer .wrap {
 }
 .album-lightbox.my-slider {
   margin: 0px;
-}
-.album-lightbox.my-slider.ngg-albumoverview {
-  top: 170px;
-  left: 350px;
 }
 .album-lightbox div {
   height: 100%;
