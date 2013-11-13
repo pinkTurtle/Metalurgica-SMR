@@ -1109,6 +1109,12 @@ h2 {
 body.page-template-pagina2-php article {
   min-height: 500px;
 }
+#bloque-187 .contenido-servicios {
+  opacity: 1;
+  -ms-filter: none;
+  filter: none;
+  display: block;
+}
 div#footer .wrap {
   font: normal 14px/21px $menu;
 }
