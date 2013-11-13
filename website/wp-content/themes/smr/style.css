@@ -162,6 +162,12 @@ h4 {
   font-size: 25px;
   margin: -7px 0 0 0;
 }
+h5 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #088a4b;
+  margin-bottom: 8px;
+}
 p,
 span {
   color: $text_color;
@@ -840,6 +846,8 @@ header nav .presionado:hover {
   margin: 20px auto 30px;
   padding: 0;
   background: rgba(255,255,255,0.9);
+  min-height: 500px;
+  position: relative;
 }
 #primary .wrapper article h1 {
   background: rgba(1,1,1,0.7);
@@ -957,19 +965,36 @@ header nav .presionado:hover {
   color: #666;
 }
 #primary .wrapper article .servicios-restantes {
-  width: 35%;
-  float: left;
+  position: absolute;
+  bottom: 50px;
+  left: 70px;
 }
-#primary .wrapper article .servicios-restantes a {
+#primary .wrapper article .servicios-restantes .menu-item {
+  height: 100px;
+  overflow: hidden;
+}
+#primary .wrapper article .servicios-restantes .menu-item p {
   font-family: 'Monda', sans-serif;
   color: #666;
   font-size: 11px;
   line-height: 13px;
-  width: 20%;
-  height: 100px;
+  margin: 26px 0;
+  width: 92px;
+  float: right;
+}
+#primary .wrapper article .servicios-restantes .menu-item a {
+  height: 90px;
+  width: 90px;
   padding-top: 35px;
-  padding: 10px 10px 0 0;
+  padding: 5px;
   display: inline-block;
+}
+#primary .wrapper article .servicios-restantes .menu-item a img {
+  height: 100%;
+  width: 100%;
+  -webkit-border-radius: 40px;
+  border-radius: 40px;
+  border: 5px solid #828282;
 }
 #primary .wrapper article .contacto {
   width: 50%;
@@ -1037,6 +1062,18 @@ header nav .presionado:hover {
   opacity: 0;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
   filter: alpha(opacity=0);
+}
+.logo-servicio {
+  width: 110px;
+  height: 110px;
+  float: left;
+}
+.logo-servicio a img {
+  width: 100px;
+  height: 100px;
+  -webkit-border-radius: 55px;
+  border-radius: 55px;
+  border: 7px solid #088a4b;
 }
 div#footer .wrap {
   font: normal 14px/21px $menu;

@@ -10,7 +10,7 @@
 get_header(); ?>
 
 	<main id="primary" class="content-area">
-		<div id="content no-servicios" class="wrapper site-content" role="main">
+		<div id="content" class="wrapper site-content" role="main">
 		<?php if ( have_posts() ) : ?>
 
 			<?php while ( have_posts() ) : the_post(); ?>
@@ -18,11 +18,21 @@ get_header(); ?>
 <hr />
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
+
   <h1>
     <?php the_title(); ?>
   </h1>
 
   <div class="contenido">
+
+    <div class="logo-servicio">
+      <?php if (has_post_thumbnail()) : ?> 
+      <a href="<?php the_permalink(); ?>">
+        <?php echo get_the_post_thumbnail(get_the_ID(), thumbnail); ?>
+      </a>
+      <?php endif; ?>
+    </div>
+
     <?php the_content(); ?>
 
     <div class="descripciones">
@@ -43,16 +53,9 @@ get_header(); ?>
         <?php foreach($paginas_hijas as $lh) : ?>
           <?php
             $lb_class = $lh->post_name;
-            $lb_link = get_permalink( $lh->ID );
-            $classes = array($lh->post_name);
           ?>
 
-          <?php $str_class = ''; ?>
-          <?php foreach (get_post_class($classes, $lh->ID) as $cl) : ?>
-            <?php $str_class .= $cl . ' '; ?>
-          <?php endforeach; ?>
-
-          <div id="bloque-<?php echo $lh->ID; ?>" class="<?php echo 'servicios '.$lb_slug.' '.$lb_class; ?>">
+          <div id="bloque-<?php echo $lh->ID; ?>" class="<?php echo 'servicios '.$lb_class; ?>">
             <div class="titulo-servicios">
               <strong><?php echo $lh->post_title; ?></strong>
             </div>
@@ -69,10 +72,11 @@ get_header(); ?>
       <!-- paginas hijas -->
     </div>
 
-    <?php get_template_part( 'menu-servicios', get_post_format() ); ?>
-
   </div>
-    <div class="clear"></div>
+
+  <?php get_template_part( 'menu-servicios', get_post_format() ); ?>
+
+  <div class="clear"></div>
 
 	<footer class="entry-meta">
 	</footer><!-- .entry-meta -->
