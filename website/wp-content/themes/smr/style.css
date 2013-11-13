@@ -910,7 +910,7 @@ header nav .presionado:hover {
   left: 36%;
 }
 #primary .wrapper article .descripciones {
-  padding: 20px 0px 0 20px;
+  padding: 20px 0px 20px 20px;
   float: right;
   display: block;
   width: 40%;

@@ -10,13 +10,13 @@
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
  * @package WordPress
- * @subpackage Como_Santas
+ * @subpackage smr
  * @since Twenty Thirteen
  */
 
 get_header(); ?>
 
-  <main id="primary" class="by-page content-area">
+  <main id="primary" class="content-area">
     <div id="content" class="wrapper site-content" role="main">
     <?php if ( have_posts() ) : ?>
 
@@ -44,33 +44,21 @@ get_header(); ?>
 
           $paginas_hijas = get_pages($argumentos); 
           ?>
+
         <?php if($paginas_hijas) { ?>
           <?php foreach($paginas_hijas as $lh) : ?>
             <?php
               $lb_class = $lh->post_name;
               $lb_link = get_permalink( $lh->ID );
-              $classes = array($lh->post_name);
             ?>
 
-            <?php $str_class = ''; ?>
-            <?php foreach (get_post_class($classes, $lh->ID) as $cl) : ?>
-              <?php $str_class .= $cl . ' '; ?>
-            <?php endforeach; ?>
-
-            <div id="bloque-<?php echo $lh->ID; ?>" class="<?php echo 'servicios '.$lb_slug.' '.$lb_class; ?>">
-              <div class="logo-servicio">
+            <div id="menu-item-<?php echo $lh->ID; ?>" class="<?php echo 'servicios menu-item '.$lb_class; ?>">
                 <?php if (has_post_thumbnail($lh->ID)) : ?> 
                 <a href="<?php echo $lb_link; ?>">
                   <?php echo get_the_post_thumbnail($lh->ID, thumbnail); ?>
                 </a>
                 <?php endif; ?>
-              </div>
-              <div class="titulo-servicio">
-                <a href="<?php echo $lb_link; ?>">
-                      <?php echo $lh->post_title; ?>
-                </a>
-              </div>
-
+              <p><?php echo $lh->post_title; ?></p>
             </div>
           <?php endforeach; ?>
 
@@ -80,6 +68,7 @@ get_header(); ?>
 
       </div><!-- #menu-servicios -->
 
+          <div class="clear"></div>
     </div><!-- #content -->
   </main><!-- #primary -->
 

@@ -10,7 +10,7 @@
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
  * @package WordPress
- * @subpackage Como_Santas
+ * @subpackage smr
  * @since Twenty Thirteen
  */
 
