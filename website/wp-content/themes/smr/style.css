@@ -847,7 +847,6 @@ header nav .presionado:hover {
   margin: 20px auto 30px;
   padding: 0;
   background: rgba(255,255,255,0.9);
-  min-height: 500px;
   position: relative;
 }
 #primary .wrapper article h1 {
@@ -1080,6 +1079,7 @@ header nav .presionado:hover {
   text-align: center;
   border-top: 1px dotted #088a4b;
   padding-top: 25px;
+  padding-bottom: 40px;
 }
 #menu-servicios .menu-item {
   width: 260px;
@@ -1100,6 +1100,9 @@ header nav .presionado:hover {
 }
 h2 {
   text-transform: uppercase;
+}
+body.page-template-pagina2-php article {
+  min-height: 500px;
 }
 div#footer .wrap {
   font: normal 14px/21px $menu;
