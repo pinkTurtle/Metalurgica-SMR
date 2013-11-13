@@ -25,8 +25,6 @@ get_header(); ?>
   <div class="contenido">
     <?php the_content(); ?>
 
-    <?php get_template_part( 'menu-servicios', get_post_format() ); ?>
-
     <div class="descripciones">
       <!--paginas hijas-->
         <?php /* Pages level [1] */?>
@@ -70,9 +68,11 @@ get_header(); ?>
       <?php } ?>
       <!-- paginas hijas -->
     </div>
-    <div class="clear"></div>
+
+    <?php get_template_part( 'menu-servicios', get_post_format() ); ?>
 
   </div>
+    <div class="clear"></div>
 
 	<footer class="entry-meta">
 	</footer><!-- .entry-meta -->
