@@ -1063,6 +1063,9 @@ header nav .presionado:hover {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
   filter: alpha(opacity=0);
 }
+.descripciones .servicios div.contenido-servicios .my-slider.album-lightbox.ngg-albumoverview {
+  position: absolute;
+}
 .logo-servicio {
   width: 110px;
   height: 110px;
@@ -1143,7 +1146,6 @@ div#footer .wrap {
   margin: 0px;
 }
 .album-lightbox.my-slider.ngg-albumoverview {
-  position: absolute;
   top: 170px;
   left: 350px;
 }
