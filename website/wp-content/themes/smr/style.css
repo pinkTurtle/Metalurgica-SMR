@@ -917,7 +917,6 @@ header nav .presionado:hover {
   text-decoration: none;
 }
 #primary .wrapper article .descripciones a:before {
-  content: " > ";
   color: #088a4b;
 }
 #primary .wrapper article .descripciones a:hover {
@@ -1059,13 +1058,22 @@ div#footer .wrap {
   width: auto;
   height: 100%;
 }
-.smr-slider {
-  height: 100%;
+.album-lightbox {
+  height: 200px;
+  width: 250px;
 }
-.smr-slider.my-slider {
+.album-lightbox.ngg-albumoverview {
+  width: 250px;
+}
+.album-lightbox.my-slider {
   margin: 0px;
 }
-.smr-slider div {
+.album-lightbox.my-slider.ngg-albumoverview {
+  position: absolute;
+  top: 170px;
+  left: 350px;
+}
+.album-lightbox div {
   height: 100%;
   -webkit-transition: left 1s;
   -moz-transition: left 1s;
@@ -1073,23 +1081,23 @@ div#footer .wrap {
   -ms-transition: left 1s;
   transition: left 1s;
 }
-.smr-slider div .smr-album {
+.album-lightbox div .smr-album {
   width: 250px;
   height: 200px;
 }
-.smr-slider div .smr-album .ngg-album-link {
+.album-lightbox div .smr-album .ngg-album-link {
   position: relative;
 }
-.smr-slider div .smr-album .ngg-album-link a {
+.album-lightbox div .smr-album .ngg-album-link a {
   width: 100%;
   height: 100%;
   overflow: hidden;
 }
-.smr-slider div .smr-album .ngg-album-link a img {
+.album-lightbox div .smr-album .ngg-album-link a img {
   width: 100%;
   height: auto;
 }
-.smr-slider div .smr-album .ngg-album-link a span {
+.album-lightbox div .smr-album .ngg-album-link a span {
   position: absolute;
   bottom: 0px;
   right: 0px;

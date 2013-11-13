@@ -59,7 +59,9 @@ get_header(); ?>
               <strong><?php echo $lh->post_title; ?></strong>
             </div>
             <div class="contenido-servicios">
-              <?php echo $lh->post_content; ?>
+              <?php  $el_cont = $lh->post_content;
+                echo apply_filters('the_content', $el_cont);
+              ?>
             </div>
           </div>
         <?php endforeach; ?>

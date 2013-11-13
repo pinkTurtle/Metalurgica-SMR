@@ -14,7 +14,7 @@ Follow variables are useable :
 ?>
 <?php if (!defined ('ABSPATH')) die ('No direct access allowed'); ?><?php if (!empty ($galleries)) : ?>
 
-<div class="my-slider smr-slider ngg-albumoverview">   
+<div class="my-slider album-lightbox ngg-albumoverview">   
   <div>
 
     <!-- List of galleries -->
@@ -28,8 +28,8 @@ Follow variables are useable :
 
           <?php foreach ( $images as $image ) : ?>
             <?php if ( $imgcntr == 0 ): ?>
-              <a href="<?php echo $image->imageURL ?>" title="<?php echo str_replace("\"", "'", $image->description); ?>" <?php echo $image->thumbcode ?> >
-                <img class="Thumb" alt="<?php echo $gallery->title ?>" src="<?php echo $gallery->previewurl ?>"/>
+              <a href="<?php echo $image->imageURL; ?>" <?php echo $image->thumbcode; ?> >
+                <img class="Thumb" alt="<?php echo $gallery->title ?>" src="<?php echo $gallery->previewurl ?>" />
                 <span><?php echo $gallery->title ?></span>
               </a>
               <?php $imgcntr++; ?>

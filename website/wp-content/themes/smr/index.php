@@ -17,7 +17,7 @@
 get_header(); ?>
 
 	<main id="primary" class="content-area">
-		<div id="content no-servicios" class="wrapper site-content" role="main">
+		<div id="content" class="wrapper site-content" role="main">
 		<?php if ( have_posts() ) : ?>
 
 			<?php /* The loop */ ?>
