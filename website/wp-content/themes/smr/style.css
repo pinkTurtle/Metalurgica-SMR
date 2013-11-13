@@ -1146,10 +1146,6 @@ div#footer .wrap {
   position: absolute;
   top: 170px;
   left: 350px;
-  -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
-  border: 10px solid #323232;
 }
 .album-lightbox div {
   height: 100%;
