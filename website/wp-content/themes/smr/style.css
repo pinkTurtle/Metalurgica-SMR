@@ -1019,6 +1019,7 @@ header nav .presionado:hover {
   background: #666;
   float: left;
   margin-right: 10px;
+  overflow: hidden;
 }
 #primary .wrapper article .clientes .logo-cliente img {
   width: 100%;
