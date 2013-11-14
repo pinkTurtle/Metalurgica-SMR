@@ -9963,6 +9963,191 @@ try {\n\
 } catch(e){}\n\
 //@ sourceURL=visionmedia-debug/debug.js"
 ));
+require.register("component-indexof/index.js", Function("exports, require, module",
+"module.exports = function(arr, obj){\n\
+  if (arr.indexOf) return arr.indexOf(obj);\n\
+  for (var i = 0; i < arr.length; ++i) {\n\
+    if (arr[i] === obj) return i;\n\
+  }\n\
+  return -1;\n\
+};//@ sourceURL=component-indexof/index.js"
+));
+require.register("component-emitter/index.js", Function("exports, require, module",
+"\n\
+/**\n\
+ * Module dependencies.\n\
+ */\n\
+\n\
+var index = require('indexof');\n\
+\n\
+/**\n\
+ * Expose `Emitter`.\n\
+ */\n\
+\n\
+module.exports = Emitter;\n\
+\n\
+/**\n\
+ * Initialize a new `Emitter`.\n\
+ *\n\
+ * @api public\n\
+ */\n\
+\n\
+function Emitter(obj) {\n\
+  if (obj) return mixin(obj);\n\
+};\n\
+\n\
+/**\n\
+ * Mixin the emitter properties.\n\
+ *\n\
+ * @param {Object} obj\n\
+ * @return {Object}\n\
+ * @api private\n\
+ */\n\
+\n\
+function mixin(obj) {\n\
+  for (var key in Emitter.prototype) {\n\
+    obj[key] = Emitter.prototype[key];\n\
+  }\n\
+  return obj;\n\
+}\n\
+\n\
+/**\n\
+ * Listen on the given `event` with `fn`.\n\
+ *\n\
+ * @param {String} event\n\
+ * @param {Function} fn\n\
+ * @return {Emitter}\n\
+ * @api public\n\
+ */\n\
+\n\
+Emitter.prototype.on =\n\
+Emitter.prototype.addEventListener = function(event, fn){\n\
+  this._callbacks = this._callbacks || {};\n\
+  (this._callbacks[event] = this._callbacks[event] || [])\n\
+    .push(fn);\n\
+  return this;\n\
+};\n\
+\n\
+/**\n\
+ * Adds an `event` listener that will be invoked a single\n\
+ * time then automatically removed.\n\
+ *\n\
+ * @param {String} event\n\
+ * @param {Function} fn\n\
+ * @return {Emitter}\n\
+ * @api public\n\
+ */\n\
+\n\
+Emitter.prototype.once = function(event, fn){\n\
+  var self = this;\n\
+  this._callbacks = this._callbacks || {};\n\
+\n\
+  function on() {\n\
+    self.off(event, on);\n\
+    fn.apply(this, arguments);\n\
+  }\n\
+\n\
+  fn._off = on;\n\
+  this.on(event, on);\n\
+  return this;\n\
+};\n\
+\n\
+/**\n\
+ * Remove the given callback for `event` or all\n\
+ * registered callbacks.\n\
+ *\n\
+ * @param {String} event\n\
+ * @param {Function} fn\n\
+ * @return {Emitter}\n\
+ * @api public\n\
+ */\n\
+\n\
+Emitter.prototype.off =\n\
+Emitter.prototype.removeListener =\n\
+Emitter.prototype.removeAllListeners =\n\
+Emitter.prototype.removeEventListener = function(event, fn){\n\
+  this._callbacks = this._callbacks || {};\n\
+\n\
+  // all\n\
+  if (0 == arguments.length) {\n\
+    this._callbacks = {};\n\
+    return this;\n\
+  }\n\
+\n\
+  // specific event\n\
+  var callbacks = this._callbacks[event];\n\
+  if (!callbacks) return this;\n\
+\n\
+  // remove all handlers\n\
+  if (1 == arguments.length) {\n\
+    delete this._callbacks[event];\n\
+    return this;\n\
+  }\n\
+\n\
+  // remove specific handler\n\
+  var i = index(callbacks, fn._off || fn);\n\
+  if (~i) callbacks.splice(i, 1);\n\
+  return this;\n\
+};\n\
+\n\
+/**\n\
+ * Emit `event` with the given args.\n\
+ *\n\
+ * @param {String} event\n\
+ * @param {Mixed} ...\n\
+ * @return {Emitter}\n\
+ */\n\
+\n\
+Emitter.prototype.emit = function(event){\n\
+  this._callbacks = this._callbacks || {};\n\
+  var args = [].slice.call(arguments, 1)\n\
+    , callbacks = this._callbacks[event];\n\
+\n\
+  if (callbacks) {\n\
+    callbacks = callbacks.slice(0);\n\
+    for (var i = 0, len = callbacks.length; i < len; ++i) {\n\
+      callbacks[i].apply(this, args);\n\
+    }\n\
+  }\n\
+\n\
+  return this;\n\
+};\n\
+\n\
+/**\n\
+ * Return array of callbacks for `event`.\n\
+ *\n\
+ * @param {String} event\n\
+ * @return {Array}\n\
+ * @api public\n\
+ */\n\
+\n\
+Emitter.prototype.listeners = function(event){\n\
+  this._callbacks = this._callbacks || {};\n\
+  return this._callbacks[event] || [];\n\
+};\n\
+\n\
+/**\n\
+ * Check if this emitter has `event` handlers.\n\
+ *\n\
+ * @param {String} event\n\
+ * @return {Boolean}\n\
+ * @api public\n\
+ */\n\
+\n\
+Emitter.prototype.hasListeners = function(event){\n\
+  return !! this.listeners(event).length;\n\
+};\n\
+//@ sourceURL=component-emitter/index.js"
+));
+require.register("component-inherit/index.js", Function("exports, require, module",
+"\n\
+module.exports = function(a, b){\n\
+  var fn = function(){};\n\
+  fn.prototype = b.prototype;\n\
+  a.prototype = new fn;\n\
+  a.prototype.constructor = a;\n\
+};//@ sourceURL=component-inherit/index.js"
+));
 require.register("pinkTurtle-newslider/index.js", Function("exports, require, module",
 "\n\
 /**\n\
@@ -9971,6 +10156,8 @@ require.register("pinkTurtle-newslider/index.js", Function("exports, require, mo
 \n\
 var o = require('jquery');\n\
 var debug = require('debug')('newslider');\n\
+var Emitter = require('emitter');\n\
+var inherit = require('inherit');\n\
 \n\
 debug('booting %s');\n\
 \n\
@@ -9997,6 +10184,8 @@ function NewSlider(el, opts){\n\
   // TODO: uncomment\n\
   // if (!(this instanceof NewSlider)) return new NewSlider;\n\
 \n\
+  Emitter.call(this);\n\
+\n\
   // DOM elements\n\
   this.el = o(el);\n\
   this.wrapper = this.el.children();\n\
@@ -10006,10 +10195,15 @@ function NewSlider(el, opts){\n\
   this.el.addClass('newslider-viewport');\n\
   this.wrapper.addClass('newslider-wrapper');\n\
 \n\
-  this.current = 0;\n\
-\n\
   this.calc();\n\
+  this.goto(0);\n\
 }\n\
+\n\
+/**\n\
+ * Inherits from `Emmiter`.\n\
+ */\n\
+\n\
+inherit(NewSlider, Emitter);\n\
 \n\
 /**\n\
  * Move to first slide\n\
@@ -10060,7 +10254,7 @@ NewSlider.prototype.goto = function(n){\n\
 \n\
   var self = this;\n\
   var sl = this.slides.eq(n);\n\
-  var offx = parseInt(sl.position().left + sl.outerWidth() / 2 - this.dimms.viewport / 2);\n\
+  var offx = parseInt(sl.position().left + sl.width() / 2 - this.dimms.viewport / 2);\n\
 \n\
   if (this.opts.animate) {\n\
     this.wrapper.animate({ 'left': -offx }, function(){\n\
@@ -10074,6 +10268,7 @@ NewSlider.prototype.goto = function(n){\n\
   function setCurrent(n){\n\
     self.current = n;\n\
     self.slides.eq(n).addClass(\"currentslide\");\n\
+    self.emit('change', n);\n\
     debug('current slide: %s', self.current);\n\
   };\n\
 \n\
@@ -10088,18 +10283,18 @@ NewSlider.prototype.goto = function(n){\n\
 \n\
 NewSlider.prototype.calc = function(){\n\
   this.dimms = {\n\
-    viewport: this.el.outerWidth(),\n\
+    viewport: this.el.width(),\n\
     wrapper: 0\n\
   };\n\
 \n\
   // calc wrapper width\n\
   for (var i = 0; i < this.slides.length; i++) {\n\
     var sl = this.slides.eq(i);\n\
-    this.dimms.wrapper += sl.outerWidth();\n\
+    this.dimms.wrapper += sl.width();\n\
   };\n\
 \n\
   // set wrapper width\n\
-  this.wrapper.outerWidth(this.dimms.wrapper);\n\
+  this.wrapper.width(this.dimms.wrapper);\n\
 \n\
   debug('viewport width: %s', this.dimms.viewport);\n\
   debug('wrapper width: %s', this.dimms.wrapper);\n\
@@ -10121,6 +10316,8 @@ var o = jQuery = require('jquery');\n\
 
 
 
+
+
 require.alias("component-jquery/index.js", "main/deps/jquery/index.js");
 require.alias("component-jquery/index.js", "jquery/index.js");
 
@@ -10130,7 +10327,12 @@ require.alias("visionmedia-debug/index.js", "debug/index.js");
 
 require.alias("pinkTurtle-newslider/index.js", "main/deps/newslider/index.js");
 require.alias("pinkTurtle-newslider/index.js", "newslider/index.js");
+require.alias("component-emitter/index.js", "pinkTurtle-newslider/deps/emitter/index.js");
+require.alias("component-indexof/index.js", "component-emitter/deps/indexof/index.js");
+
 require.alias("component-jquery/index.js", "pinkTurtle-newslider/deps/jquery/index.js");
+
+require.alias("component-inherit/index.js", "pinkTurtle-newslider/deps/inherit/index.js");
 
 require.alias("visionmedia-debug/index.js", "pinkTurtle-newslider/deps/debug/index.js");
 require.alias("visionmedia-debug/debug.js", "pinkTurtle-newslider/deps/debug/debug.js");

@@ -1046,8 +1046,8 @@ header nav .presionado:hover {
 }
 #primary .wrapper article .clientes-individual .album-lightbox {
   position: absolute;
-  left: 4%;
-  top: 25px;
+  left: 3%;
+  top: 35px;
 }
 .descripciones .servicios strong {
   cursor: pointer;
@@ -1066,7 +1066,7 @@ header nav .presionado:hover {
 .descripciones .servicios div.contenido-servicios .my-slider.album-lightbox.ngg-albumoverview {
   position: absolute;
   top: 170px;
-  left: 350px;
+  left: 32%;
 }
 .logo-servicio {
   width: 110px;
@@ -1146,12 +1146,10 @@ div#footer .wrap {
   width: auto;
   height: 100%;
 }
-.album-lightbox {
-  height: 200px;
-  width: 250px;
-}
 .album-lightbox.ngg-albumoverview {
-  width: 250px;
+  height: 220px;
+  width: 270px;
+  border: 10px solid #323232;
 }
 .album-lightbox.my-slider {
   margin: 0px;
@@ -1190,8 +1188,9 @@ div#footer .wrap {
   color: #000;
 }
 .clientes-individual .album-lightbox.ngg-albumoverview {
-  width: 365px;
-  height: 275px;
+  width: 385px;
+  height: 295px;
+  border: 10px solid #088a4b;
 }
 .clientes-individual .album-lightbox .smr-album {
   width: 365px;
