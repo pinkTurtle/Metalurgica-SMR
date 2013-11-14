@@ -20,7 +20,7 @@ get_header(); ?>
         <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
           <h1>
-            <?php the_title(); ?>
+            Clientes
           </h1>
           <div class="contenido">
             <div class="clientes-individual">
