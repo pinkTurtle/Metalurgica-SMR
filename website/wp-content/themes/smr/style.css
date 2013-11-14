@@ -1119,6 +1119,17 @@ div.descripciones .servicios:first-child .contenido-servicios {
   filter: none;
   display: block;
 }
+.contenido div.wpcf7 {
+  width: 75%;
+  margin: 50px auto 0px;
+  border: 2px solid #808080;
+  padding: 20px;
+  -webkit-border-radius: 20px;
+  border-radius: 20px;
+}
+.contenido div.wpcf7 textarea {
+  height: 170px;
+}
 div#footer .wrap {
   font: normal 14px/21px $menu;
 }
