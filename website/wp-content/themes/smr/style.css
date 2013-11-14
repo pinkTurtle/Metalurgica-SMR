@@ -831,6 +831,7 @@ header nav .presionado:hover {
   border-top: solid 100px rgba(1,1,1,0.5);
 }
 #primary .wrapper hr {
+  min-width: 1020px;
   height: 20px;
   background: #088a4b;
   width: 80%;
@@ -844,6 +845,7 @@ header nav .presionado:hover {
 }
 #primary .wrapper article {
   width: 80%;
+  min-width: 1020px;
   margin: 20px auto 30px;
   padding: 0;
   background: rgba(255,255,255,0.9);
@@ -1039,15 +1041,13 @@ header nav .presionado:hover {
   color: #088a4b;
 }
 #primary .wrapper article .clientes-individual {
-  float: left;
-  width: 100%;
+  float: right;
+  width: 60%;
 }
-#primary .wrapper article .clientes-individual .galeria-cliente {
-  height: 250px;
-  width: 400px;
-  background: #666;
-  float: left;
-  margin: 25px 25px 0 0;
+#primary .wrapper article .clientes-individual .album-lightbox {
+  position: absolute;
+  left: 4%;
+  top: 25px;
 }
 .descripciones .servicios strong {
   cursor: pointer;
@@ -1108,6 +1108,9 @@ h2 {
 }
 body.page-template-pagina2-php article {
   min-height: 500px;
+}
+body.page-template-pagina-php article {
+  min-height: 400px;
 }
 div.descripciones .servicios:first-child .contenido-servicios {
   opacity: 1;
@@ -1185,6 +1188,14 @@ div#footer .wrap {
   font-weight: bold;
   text-shadow: -1px 1px 7px #fff;
   color: #000;
+}
+.clientes-individual .album-lightbox.ngg-albumoverview {
+  width: 365px;
+  height: 275px;
+}
+.clientes-individual .album-lightbox .smr-album {
+  width: 365px;
+  height: 275px;
 }
 /* Component */
 .newslider-viewport {
