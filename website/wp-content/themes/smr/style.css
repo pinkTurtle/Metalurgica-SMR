@@ -1019,14 +1019,18 @@ header nav .presionado:hover {
   height: 70px;
   width: 70px;
   float: left;
-  margin-right: 10px;
+  margin-right: 0px;
   overflow: hidden;
 }
 #primary .wrapper article .clientes .logo-cliente img {
   width: 100%;
   height: auto;
 }
-#primary .wrapper article .clientes .titulo-clientes a {
+#primary .wrapper article .clientes .bloque-clientes {
+  width: 80%;
+  float: right;
+}
+#primary .wrapper article .clientes .bloque-clientes .titulo-clientes a {
   font-family: 'Monda', sans-serif;
   font-weight: 700;
   color: #088a4b;
@@ -1034,10 +1038,10 @@ header nav .presionado:hover {
   line-height: 18px;
   margin: 0;
 }
-#primary .wrapper article .clientes .titulo-clientes a:hover {
+#primary .wrapper article .clientes .bloque-clientes .titulo-clientes a:hover {
   font-weight: 700;
 }
-#primary .wrapper article .clientes .titulo-clientes a:visited {
+#primary .wrapper article .clientes .bloque-clientes .titulo-clientes a:visited {
   color: #088a4b;
 }
 #primary .wrapper article .clientes-individual {

@@ -52,16 +52,18 @@
         </a>
         <?php endif; ?>
       </div>
-      <div class="titulo-clientes">
-        <a href="<?php echo $lb_link; ?>">
-              <?php echo $lh->post_title; ?>
-        </a>
-      </div>
-      <strong><?php echo $ubicacion; ?></strong>
-      <p>
-        <?php echo substr($lh->post_content,0 , 50); ?>
-      </p>
+      <div class="bloque-clientes">
+        <div class="titulo-clientes">
+          <a href="<?php echo $lb_link; ?>">
+                <?php echo $lh->post_title; ?>
+          </a>
+        </div>
+        <strong><?php echo $ubicacion; ?></strong>
+        <p>
+          <?php echo truncar($lh->post_content, 40); ?>
+        </p>
 
+      </div>
     </div>
   <?php endforeach; ?>
 
