@@ -1131,6 +1131,13 @@ div.descripciones .servicios:first-child .contenido-servicios {
 .contenido div.wpcf7 textarea {
   height: 170px;
 }
+.contenido div.wpcf7 input[type="submit"] {
+  background: -webkit-linear-gradient(top, rgba(255,255,255,0.2) 0%, rgba(0,0,0,0.2) 100%) repeat scroll 0 0 #088a4b;
+  background: -moz-linear-gradient(top, rgba(255,255,255,0.2) 0%, rgba(0,0,0,0.2) 100%) repeat scroll 0 0 #088a4b;
+  background: -o-linear-gradient(top, rgba(255,255,255,0.2) 0%, rgba(0,0,0,0.2) 100%) repeat scroll 0 0 #088a4b;
+  background: -ms-linear-gradient(top, rgba(255,255,255,0.2) 0%, rgba(0,0,0,0.2) 100%) repeat scroll 0 0 #088a4b;
+  background: linear-gradient(to bottom, rgba(255,255,255,0.2) 0%, rgba(0,0,0,0.2) 100%) repeat scroll 0 0 #088a4b;
+}
 div#footer .wrap {
   font: normal 14px/21px $menu;
 }
