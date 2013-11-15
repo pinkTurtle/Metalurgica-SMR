@@ -138,20 +138,21 @@
             color: $gris-fuente
             font-size: 11px
             line-height: 13px
-            margin: 26px 0;
-            width: 92px;
+            margin: 22px 10px;
+            width: 100px;
             float: right
           a
-            height: 90px
-            width: 90px
-            padding-top: 35px
-            padding: 5px
-            display: inline-block
-            img
-              height: 100%
-              width: 100%
+            .img-container
+              height: 80px
+              width: 80px
+              display: inline-block
               border-radius: 40px
               border: 5px solid #828282
+              overflow: hidden
+              img
+                margin: -5px 0 0 -5px;
+                height: 80px
+                width: 80px
           
       .contacto
         width: 50%
@@ -219,11 +220,16 @@
   height: 110px
   float: left
   a
-    img
-      width: 100px
-      height: 100px
+    .img-container
       border-radius: 55px
       border: 7px solid $verde-hover
+      width: 100px
+      height: 100px
+      overflow: hidden
+      img
+        margin: -7px 0 0 -7px;
+        width: 93px
+        height: 93px
 
 #menu-servicios
   text-align: center

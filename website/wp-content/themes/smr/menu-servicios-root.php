@@ -25,7 +25,9 @@
                 <?php if (has_post_thumbnail($lh->ID)) : ?> 
               <div class="logo-servicio">  
                 <a href="<?php echo $lb_link; ?>">
+                <div class="img-container">
                   <?php echo get_the_post_thumbnail($lh->ID, thumbnail); ?>
+                </div>
                 </a>
                 <?php endif; ?>
               </div>

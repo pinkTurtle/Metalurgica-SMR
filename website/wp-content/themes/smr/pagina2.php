@@ -29,7 +29,9 @@ get_header(); ?>
     <div class="logo-servicio">
       <?php if (has_post_thumbnail()) : ?> 
       <a href="<?php the_permalink(); ?>">
+        <div class="img-container">
         <?php echo get_the_post_thumbnail(get_the_ID(), thumbnail); ?>
+        </div>
       </a>
       <?php endif; ?>
     </div>

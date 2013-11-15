@@ -21,12 +21,14 @@
             ?>
 
             <div id="menu-item-<?php echo $lh->ID; ?>" class="<?php echo 'servicios menu-item '.$lb_class; ?>">
-                <?php if (has_post_thumbnail($lh->ID)) : ?> 
-                <a href="<?php echo $lb_link; ?>">
+              <?php if (has_post_thumbnail($lh->ID)) : ?> 
+              <a href="<?php echo $lb_link; ?>">
+                <div class="img-container">
                   <?php echo get_the_post_thumbnail($lh->ID, thumbnail); ?>
-                </a>
-                <?php endif; ?>
-              <p><?php echo $lh->post_title; ?></p>
+                </div>
+              </a>
+              <?php endif; ?>
+            <p><?php echo $lh->post_title; ?></p>
             </div>
           <?php endforeach; ?>
 
