@@ -39,7 +39,7 @@ o(document).ready(function() {
   }
 
   // conent slider
-  if (o('.content-slider').length) {
+  if (o('.clientes-individual .content-slider').length) {
     debug('Rendering main slider');
 
     var NewSlider = require('newslider');
@@ -71,8 +71,10 @@ o(document).ready(function() {
     }, 7000);
   }
 
-
-
+    // seccion servicios
+    // manejo de divs y 
+    // de slider
+    //
     o(".descripciones .servicios").click(function() {
       if (o(this).find('.contenido-servicios').css('display')=='none') {
         o('.descripciones .servicios .contenido-servicios').slideUp( "slow" );
