@@ -275,9 +275,9 @@ div.descripciones .servicios:first-child .contenido-servicios
 .contenido .content-servicio
   width: 40%
   display: inline-block
-
   p
     display: none
+    transition: opacity 1s
     opacity: 0
 
 .contenido
@@ -292,3 +292,6 @@ div.descripciones .servicios:first-child .contenido-servicios
       height: 170px
     input[type="submit"]
       background: linear-gradient(to bottom, rgba(255, 255, 255, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%) repeat scroll 0 0 $verde-hover
+
+.contenido-padre
+  transition: opacity 1s

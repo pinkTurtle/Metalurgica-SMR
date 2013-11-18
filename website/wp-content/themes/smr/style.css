@@ -1134,6 +1134,11 @@ body.page-template-pagina-php article {
 }
 .contenido .content-servicio p {
   display: none;
+  -webkit-transition: opacity 1s;
+  -moz-transition: opacity 1s;
+  -o-transition: opacity 1s;
+  -ms-transition: opacity 1s;
+  transition: opacity 1s;
   opacity: 0;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
   filter: alpha(opacity=0);
@@ -1156,6 +1161,13 @@ body.page-template-pagina-php article {
   background: -o-linear-gradient(top, rgba(255,255,255,0.2) 0%, rgba(0,0,0,0.2) 100%) repeat scroll 0 0 #088a4b;
   background: -ms-linear-gradient(top, rgba(255,255,255,0.2) 0%, rgba(0,0,0,0.2) 100%) repeat scroll 0 0 #088a4b;
   background: linear-gradient(to bottom, rgba(255,255,255,0.2) 0%, rgba(0,0,0,0.2) 100%) repeat scroll 0 0 #088a4b;
+}
+.contenido-padre {
+  -webkit-transition: opacity 1s;
+  -moz-transition: opacity 1s;
+  -o-transition: opacity 1s;
+  -ms-transition: opacity 1s;
+  transition: opacity 1s;
 }
 div#footer .wrap {
   font: normal 14px/21px $menu;

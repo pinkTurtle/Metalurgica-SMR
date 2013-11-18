@@ -41,6 +41,7 @@ o(document).ready(function() {
     o(".descripciones .servicios").click(function() {
         o('.descripciones .servicios .contenido-servicios').slideUp( "slow" );
         o('.contenido-padre').slideUp( "slow" );
+        o('.contenido-padre').css( 'opacity', '0' );
         o('#menu-servicios').slideUp( "slow" );
         o('.servicios-restantes').slideDown( "slow" );
         o('.content-servicio').css( 'width', '85%' );
