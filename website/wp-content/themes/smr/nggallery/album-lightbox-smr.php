@@ -14,7 +14,7 @@ Follow variables are useable :
 ?>
 <?php if (!defined ('ABSPATH')) die ('No direct access allowed'); ?><?php if (!empty ($galleries)) : ?>
 
-<div class="my-slider album-lightbox ngg-albumoverview">   
+<div class="content-slider album-lightbox ngg-albumoverview">   
   <div>
 
     <!-- List of galleries -->

@@ -49,7 +49,14 @@ o(document).ready(function() {
         o('.content-servicio p').css( 'opacity', '1' );
         o('.descripciones .servicios .contenido-servicios').css( 'opacity', '0' );
         o(this).find('.contenido-servicios').slideDown( "slow" );
-        o(this).find('.contenido-servicios').css( 'opacity', '1' );;
+        o(this).find('.contenido-servicios').css( 'opacity', '1' );
+
+        var NewSlider = require('newslider');
+        var contentSlider = new NewSlider(o(this).find('.content-slider'));
+        var slideTimer = window.setInterval(function(){
+          contentSlider.next();
+        }, 7000);
+
     });
 
 });
