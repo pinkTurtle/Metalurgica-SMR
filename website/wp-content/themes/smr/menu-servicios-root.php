@@ -39,3 +39,4 @@
         <?php } ?>
         <!-- paginas hijas -->
 
+      </div>

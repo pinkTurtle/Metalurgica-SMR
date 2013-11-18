@@ -25,6 +25,14 @@ get_header(); ?>
 
   <div class="contenido">
 
+    <div class="contenido-padre">
+      <?php
+      if ($post->post_parent) {
+          $parent = get_page($post->post_parent);
+          echo apply_filters('the_content', $parent->post_content);
+      }
+      ?>
+    </div>
 
     <div class="logo-servicio">
       <?php if (has_post_thumbnail()) : ?> 
@@ -36,11 +44,13 @@ get_header(); ?>
       <?php endif; ?>
     </div>
 
-  <h2>
-    <?php the_title(); ?>
-  </h2>
+    <div class="content-servicio">
+      <h2>
+        <?php the_title(); ?>
+      </h2>
 
-    <?php the_content(); ?>
+      <?php the_content(); ?>
+    </div>
 
     <div class="descripciones">
       <!--paginas hijas-->
@@ -74,10 +84,10 @@ get_header(); ?>
           </div>
         <?php endforeach; ?>
 
-        <div class="clear"></div>
       <?php } ?>
       <!-- paginas hijas -->
     </div>
+    <div class="clear"></div>
 
   </div>
 

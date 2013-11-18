@@ -918,7 +918,7 @@ header nav .presionado:hover {
   width: 40%;
   text-align: left;
 }
-#primary .wrapper article .descripciones a {
+#primary .wrapper article .descripciones strong {
   font-size: 15px;
   line-height: 18px;
   margin: 0;
@@ -926,10 +926,11 @@ header nav .presionado:hover {
   color: #088a4b;
   text-decoration: none;
 }
-#primary .wrapper article .descripciones a:before {
+#primary .wrapper article .descripciones strong:before {
+  content: " > ";
   color: #088a4b;
 }
-#primary .wrapper article .descripciones a:hover {
+#primary .wrapper article .descripciones strong:hover {
   font-weight: 700;
 }
 #primary .wrapper article .descripciones .desplegables {
@@ -967,6 +968,7 @@ header nav .presionado:hover {
   color: #666;
 }
 #primary .wrapper article .servicios-restantes {
+  display: none;
   position: absolute;
   bottom: 50px;
   left: 70px;
@@ -1123,11 +1125,15 @@ body.page-template-pagina2-php article {
 body.page-template-pagina-php article {
   min-height: 400px;
 }
-div.descripciones .servicios:first-child .contenido-servicios {
-  opacity: 1;
-  -ms-filter: none;
-  filter: none;
-  display: block;
+.contenido .content-servicio {
+  width: 40%;
+  display: inline-block;
+}
+.contenido .content-servicio p {
+  display: none;
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
 }
 .contenido div.wpcf7 {
   width: 75%;
