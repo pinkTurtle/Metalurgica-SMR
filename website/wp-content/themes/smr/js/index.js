@@ -50,10 +50,12 @@ o(document).ready(function() {
         o('.descripciones .servicios .contenido-servicios').css( 'opacity', '0' );
         o(this).find('.contenido-servicios').slideDown( "slow" );
         o(this).find('.contenido-servicios').css( 'opacity', '1' );
+        contentSlider = null;
+        clearInterval(slideTimer);
 
-        var NewSlider = require('newslider');
-        var contentSlider = new NewSlider(o(this).find('.content-slider'));
-        var slideTimer = window.setInterval(function(){
+        NewSlider = require('newslider');
+        contentSlider = new NewSlider(o(this).find('.content-slider'));
+        slideTimer = window.setInterval(function(){
           contentSlider.next();
         }, 7000);
 
