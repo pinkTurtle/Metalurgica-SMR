@@ -1116,6 +1116,9 @@ header nav .presionado:hover {
   float: right;
   text-align: left;
 }
+#menu-servicios .menu-item .logo-servicio a .img-container {
+  border: 7px solid #666;
+}
 h2 {
   text-transform: uppercase;
 }
