@@ -924,11 +924,15 @@ header nav .presionado:hover {
   margin: 0;
   font-family: 'Monda', sans-serif;
   color: #088a4b;
+  position: relative;
   text-decoration: none;
 }
 #primary .wrapper article .descripciones strong:before {
   content: " > ";
   color: #088a4b;
+  position: absolute;
+  left: -10px;
+  top: 2px;
 }
 #primary .wrapper article .descripciones strong:hover {
   font-weight: 700;
