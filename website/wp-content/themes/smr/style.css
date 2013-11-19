@@ -930,7 +930,7 @@ header nav .presionado:hover {
 }
 #primary .wrapper article .descripciones strong:before {
   content: " > ";
-  color: #088a4b;
+  color: #165622;
   position: absolute;
   left: -10px;
   top: 2px;
@@ -1148,6 +1148,10 @@ body.page-template-pagina-php article {
   opacity: 0;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
   filter: alpha(opacity=0);
+}
+.contenido .content-servicio h2,
+.contenido .content-servicio h5 {
+  text-align: left;
 }
 .contenido div.wpcf7 {
   width: 75%;
