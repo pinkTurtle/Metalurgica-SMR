@@ -1012,7 +1012,7 @@ header nav .presionado:hover {
 #primary .wrapper article .mapa {
   width: 50%;
   height: 250px;
-  float: left;
+  float: right;
   background: #666;
 }
 #primary .wrapper article .clientes {
