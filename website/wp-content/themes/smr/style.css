@@ -924,7 +924,7 @@ header nav .presionado:hover {
   line-height: 18px;
   margin: 0;
   font-family: 'Monda', sans-serif;
-  color: #088a4b;
+  color: #165622;
   position: relative;
   text-decoration: none;
 }
@@ -937,6 +937,7 @@ header nav .presionado:hover {
 }
 #primary .wrapper article .descripciones strong:hover {
   font-weight: 700;
+  color: #088a4b;
 }
 #primary .wrapper article .descripciones .desplegables {
   float: none;
