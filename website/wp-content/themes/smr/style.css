@@ -912,6 +912,7 @@ header nav .presionado:hover {
   left: 36%;
 }
 #primary .wrapper article .descripciones {
+  position: relative;
   padding: 20px 0px 20px 20px;
   float: right;
   display: block;
@@ -1076,8 +1077,8 @@ header nav .presionado:hover {
 }
 .descripciones .servicios div.contenido-servicios .content-slider.album-lightbox.ngg-albumoverview {
   position: absolute;
-  top: 170px;
-  left: 32%;
+  top: 10px;
+  left: -280px;
 }
 .logo-servicio {
   width: 110px;
