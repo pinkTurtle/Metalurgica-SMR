@@ -991,10 +991,14 @@ header nav .presionado:hover {
   width: 100px;
   float: right;
 }
+#primary .wrapper article .servicios-restantes .menu-item a {
+  display: block;
+  float: left;
+}
 #primary .wrapper article .servicios-restantes .menu-item a .img-container {
   height: 80px;
   width: 80px;
-  display: inline-block;
+  display: block;
   -webkit-border-radius: 40px;
   border-radius: 40px;
   border: 5px solid #828282;
