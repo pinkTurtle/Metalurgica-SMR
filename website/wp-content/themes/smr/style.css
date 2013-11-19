@@ -1062,6 +1062,9 @@ header nav .presionado:hover {
   left: -410px;
   top: 25px;
 }
+.descripciones .servicios {
+  margin: 6px 0px;
+}
 .descripciones .servicios strong {
   cursor: pointer;
 }
