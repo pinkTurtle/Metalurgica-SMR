@@ -240,8 +240,8 @@
         height: 93px
 
 #menu-servicios
+  position: relative
   text-align: center
-  border-top: 1px dotted $verde-hover
   padding-top: 25px
   padding-bottom: 40px
   .menu-item
@@ -263,6 +263,13 @@
       a
         .img-container
           border: 7px solid $gris-fuente
+  &:before
+    border-top: 3px dotted $verde-hover
+    content: " "
+    position: absolute
+    top: 0px
+    left: 10%
+    width: 80%
 
 h2
   text-transform: uppercase
