@@ -16,6 +16,7 @@
   </h1>
   <div class="contenido">
 
+    <?php if(is_page('servicios')) : ?> 
     <div class="logo-servicio">
       <?php if (has_post_thumbnail()) : ?> 
       <a href="<?php the_permalink(); ?>">
@@ -25,6 +26,7 @@
       </a>
       <?php endif; ?>
     </div>
+    <?php endif; ?>
 
 
     <?php the_content(); ?>

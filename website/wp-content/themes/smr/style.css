@@ -1006,11 +1006,11 @@ header nav .presionado:hover {
   width: 80px;
 }
 #primary .wrapper article .contacto {
-  width: 39%;
+  width: 50%;
   float: left;
 }
 #primary .wrapper article .mapa {
-  width: 48%;
+  width: 50%;
   height: 250px;
   float: right;
   background: #666;
