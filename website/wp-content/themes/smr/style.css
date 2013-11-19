@@ -913,7 +913,7 @@ header nav .presionado:hover {
 }
 #primary .wrapper article .descripciones {
   position: relative;
-  padding: 20px 0px 20px 20px;
+  padding: 0px 0px 20px 20px;
   float: right;
   display: block;
   width: 40%;
@@ -981,7 +981,6 @@ header nav .presionado:hover {
 }
 #primary .wrapper article .servicios-restantes .menu-item {
   height: 100px;
-  overflow: hidden;
 }
 #primary .wrapper article .servicios-restantes .menu-item p {
   font-family: 'Monda', sans-serif;
@@ -1063,7 +1062,7 @@ header nav .presionado:hover {
   top: 25px;
 }
 .descripciones .servicios {
-  margin: 6px 0px;
+  margin: 0px 0px 8px;
 }
 .descripciones .servicios strong {
   cursor: pointer;
