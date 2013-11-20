@@ -26,7 +26,7 @@ $sv_path = 'servicios/mantenimiento-electromecanico-industrial';
 $servicios = get_page_by_path($sv_path);
 ?>
 
-  <div class="contenido">
+  <div class="contenido servicios">
   <?php the_content(); ?>
 
     <div class="logo-servicio">
