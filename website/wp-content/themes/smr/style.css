@@ -1136,6 +1136,9 @@ header nav .presionado:hover {
 #menu-servicios .menu-item .logo-servicio a .img-container {
   border: 7px solid #666;
 }
+#menu-servicios .menu-item .logo-servicio a .img-container:hover {
+  border: 7px solid #088a4b;
+}
 #menu-servicios:before {
   border-top: 3px dotted #088a4b;
   content: " ";
