@@ -984,8 +984,8 @@ header nav .presionado:hover {
 #primary .wrapper article .servicios-restantes .menu-item p {
   font-family: 'Monda', sans-serif;
   color: #666;
-  font-size: 11px;
-  line-height: 13px;
+  font-size: 13px;
+  line-height: 14px;
   margin: 22px 10px;
   width: 100px;
   float: right;
@@ -1007,6 +1007,9 @@ header nav .presionado:hover {
   margin: -5px 0 0 -5px;
   height: 80px;
   width: 80px;
+}
+#primary .wrapper article .servicios-restantes .menu-item a .img-container:hover {
+  border: 5px solid #088a4b;
 }
 #primary .wrapper article .contacto {
   width: 50%;
