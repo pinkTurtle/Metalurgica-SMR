@@ -985,6 +985,7 @@ header nav .presionado:hover {
   height: 100px;
 }
 #primary .wrapper article .servicios-restantes .menu-item p {
+  text-transform: uppercase;
   font-family: 'Monda', sans-serif;
   color: #666;
   font-size: 13px;
