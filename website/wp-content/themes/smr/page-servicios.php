@@ -22,13 +22,12 @@ get_header(); ?>
     Servicios
   </h1>
 <?php
-$sv_slug = 'servicios/mantenimiento-electromecanico-industrial';
-$servicios = get_page_by_path($sv_slug);
+$sv_path = 'servicios/mantenimiento-electromecanico-industrial';
+$servicios = get_page_by_path($sv_path);
 ?>
 
   <div class="contenido">
-
-      <?php the_content(); ?>
+  <?php the_content(); ?>
 
     <div class="logo-servicio">
       <?php if (has_post_thumbnail($servicios->ID)) : ?> 
@@ -44,41 +43,35 @@ $servicios = get_page_by_path($sv_slug);
       <h2>
         <?php echo $servicios->post_title; ?>
       </h2>
-
     </div>
 
     <div class="descripciones">
-      <!--paginas hijas-->
-        <?php /* Pages level [1] */?>
-        <?php $argumentos = array(
-          'sort_order' => 'ASC',
-          'sort_column' => 'menu_order',
-          'child_of' => $servicios->ID,
-          'parent' => $servicios->ID,
-          'post_type' => 'page',
-          'post_status' => 'publish'
-        ); 
+      <?php $argumentos = array(
+        'sort_order' => 'ASC',
+        'sort_column' => 'menu_order',
+        'child_of' => $servicios->ID,
+        'parent' => $servicios->ID,
+        'post_type' => 'page',
+        'post_status' => 'publish'
+      ); 
 
-        $paginas_hijas = get_pages($argumentos); 
-        ?>
+      $paginas_hijas = get_pages($argumentos); 
+      ?>
       <?php if($paginas_hijas) { ?>
-        <?php foreach($paginas_hijas as $lh) : ?>
-          <?php
-            $lb_class = $lh->post_name;
-          ?>
+      <?php foreach($paginas_hijas as $lh) : ?>
+      <?php $lb_class = $lh->post_name; ?>
 
-          <div id="bloque-<?php echo $lh->ID; ?>" class="<?php echo 'servicios '.$lb_class; ?>">
-            <div class="titulo-servicios">
-              <strong><?php echo $lh->post_title; ?></strong>
-            </div>
-          </div>
-        <?php endforeach; ?>
+      <div id="bloque-<?php echo $lh->ID; ?>" class="<?php echo 'servicios '.$lb_class; ?>">
+        <div class="titulo-servicios">
+          <strong><?php echo $lh->post_title; ?></strong>
+        </div>
+      </div>
+      <?php endforeach; ?>
 
-      <?php } ?>
-      <!-- paginas hijas -->
+        <?php } ?>
+        <!-- paginas hijas -->
     </div>
     <div class="clear"></div>
-
   </div>
 
   <?php get_template_part( 'menu-servicios-root', get_post_format() ); ?>
