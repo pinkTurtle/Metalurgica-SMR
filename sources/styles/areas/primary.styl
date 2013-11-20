@@ -133,7 +133,6 @@
                 color: $gris-fuente
 
       .servicios-restantes 
-        display: none
         position: absolute
         bottom: 50px
         left: 70px
@@ -211,18 +210,23 @@
           left: -410px
           top: 25px
 
-.descripciones .servicios
-  margin: 0px 0px 8px
-  strong
-    cursor: pointer
-  div.contenido-servicios
-    transition: opacity 1s
-    display: none
-    opacity: 0
-    .content-slider.album-lightbox.ngg-albumoverview
-      position: absolute
-      top: -5px
-      left: -280px
+.descripciones
+  .servicios
+    margin: 0px 0px 8px
+    strong
+      cursor: pointer
+    .contenido-servicios
+      transition: opacity 1s
+      display: none
+      opacity: 0
+      .content-slider.album-lightbox.ngg-albumoverview
+        position: absolute
+        top: -5px
+        left: -280px
+    &:first-child
+      .contenido-servicios
+        opacity: 1
+        display: block
 
 .logo-servicio
   width: 110px
@@ -288,14 +292,12 @@ div.descripciones .servicios:first-child .contenido-servicios
   //display: block
 
 .contenido .content-servicio
-  width: 40%
+  width: 85%
   display: inline-block
-  p
-    display: none
-    transition: opacity 1s
-    opacity: 0
   h2,h5
     text-align: left
+  &.root
+    width: 40%
 
 .contenido
   div.wpcf7

@@ -974,7 +974,6 @@ header nav .presionado:hover {
   color: #666;
 }
 #primary .wrapper article .servicios-restantes {
-  display: none;
   position: absolute;
   bottom: 50px;
   left: 70px;
@@ -1071,7 +1070,7 @@ header nav .presionado:hover {
 .descripciones .servicios strong {
   cursor: pointer;
 }
-.descripciones .servicios div.contenido-servicios {
+.descripciones .servicios .contenido-servicios {
   -webkit-transition: opacity 1s;
   -moz-transition: opacity 1s;
   -o-transition: opacity 1s;
@@ -1082,10 +1081,16 @@ header nav .presionado:hover {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
   filter: alpha(opacity=0);
 }
-.descripciones .servicios div.contenido-servicios .content-slider.album-lightbox.ngg-albumoverview {
+.descripciones .servicios .contenido-servicios .content-slider.album-lightbox.ngg-albumoverview {
   position: absolute;
   top: -5px;
   left: -280px;
+}
+.descripciones .servicios:first-child .contenido-servicios {
+  opacity: 1;
+  -ms-filter: none;
+  filter: none;
+  display: block;
 }
 .logo-servicio {
   width: 110px;
@@ -1149,23 +1154,15 @@ body.page-template-pagina-php article {
   min-height: 400px;
 }
 .contenido .content-servicio {
-  width: 40%;
+  width: 85%;
   display: inline-block;
-}
-.contenido .content-servicio p {
-  display: none;
-  -webkit-transition: opacity 1s;
-  -moz-transition: opacity 1s;
-  -o-transition: opacity 1s;
-  -ms-transition: opacity 1s;
-  transition: opacity 1s;
-  opacity: 0;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-  filter: alpha(opacity=0);
 }
 .contenido .content-servicio h2,
 .contenido .content-servicio h5 {
   text-align: left;
+}
+.contenido .content-servicio.root {
+  width: 40%;
 }
 .contenido div.wpcf7 {
   width: 75%;

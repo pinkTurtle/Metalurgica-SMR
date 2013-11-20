@@ -1,29 +1,22 @@
 <?php
 /**
+ * The default template for displaying content. Used for both single and index/archive/search.
  *
- * Template Name: SMR Servicios
  * @package WordPress
  * @subpackage smr
- * @since Twenty Thirteen
+ * @since Twenty Thirteen 1.0
  */
-
-get_header(); ?>
-
-	<main id="primary" class="content-area">
-		<div id="content" class="wrapper site-content" role="main">
-		<?php if ( have_posts() ) : ?>
-
-			<?php while ( have_posts() ) : the_post(); ?>
+?>
 
 <hr />
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
   <h1>
-    Servicios
+    <?php the_title(); ?>
   </h1>
-
   <div class="contenido">
 
+    <?php if(is_page('servicios')) : ?> 
     <div class="logo-servicio">
       <?php if (has_post_thumbnail()) : ?> 
       <a href="<?php the_permalink(); ?>">
@@ -33,14 +26,13 @@ get_header(); ?>
       </a>
       <?php endif; ?>
     </div>
+    <?php endif; ?>
 
-    <div class="content-servicio">
-      <h2>
-        <?php the_title(); ?>
-      </h2>
 
-      <?php the_content(); ?>
-    </div>
+    <?php the_content(); ?>
+  </div>
+
+  <?php if(is_page('servicios')) : ?> 
 
     <div class="descripciones">
       <!--paginas hijas-->
@@ -79,22 +71,11 @@ get_header(); ?>
     </div>
     <div class="clear"></div>
 
+    <?php get_template_part( 'menu-servicios-root', get_post_format() ); ?>
   </div>
 
-  <?php get_template_part( 'menu-servicios', get_post_format() ); ?>
-
-  <div class="clear"></div>
+  <?php endif; ?>
 
 	<footer class="entry-meta">
 	</footer><!-- .entry-meta -->
 </article><!-- #post -->
-
-
-<?php endwhile; ?>
-		<?php endif; ?>
-		</div><!-- #content -->
-	</main><!-- #primary -->
-
-<?php //get_sidebar(); ?>
-<?php get_footer(); ?>
-

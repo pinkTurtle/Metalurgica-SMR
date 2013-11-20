@@ -21,25 +21,30 @@ get_header(); ?>
   <h1>
     Servicios
   </h1>
+<?php
+$sv_slug = 'servicios/mantenimiento-electromecanico-industrial';
+$servicios = get_page_by_path($sv_slug);
+?>
 
   <div class="contenido">
 
+      <?php the_content(); ?>
+
     <div class="logo-servicio">
-      <?php if (has_post_thumbnail()) : ?> 
-      <a href="<?php the_permalink(); ?>">
+      <?php if (has_post_thumbnail($servicios->ID)) : ?> 
+      <a href="<?php the_permalink($servicios->ID); ?>">
         <div class="img-container">
-        <?php echo get_the_post_thumbnail(get_the_ID(), thumbnail); ?>
+        <?php echo get_the_post_thumbnail($servicios->ID, thumbnail); ?>
         </div>
       </a>
       <?php endif; ?>
     </div>
 
-    <div class="content-servicio">
+    <div class="content-servicio root">
       <h2>
-        <?php the_title(); ?>
+        <?php echo $servicios->post_title; ?>
       </h2>
 
-      <?php the_content(); ?>
     </div>
 
     <div class="descripciones">
@@ -48,8 +53,8 @@ get_header(); ?>
         <?php $argumentos = array(
           'sort_order' => 'ASC',
           'sort_column' => 'menu_order',
-          'child_of' => $post->ID,
-          'parent' => $post->ID,
+          'child_of' => $servicios->ID,
+          'parent' => $servicios->ID,
           'post_type' => 'page',
           'post_status' => 'publish'
         ); 
@@ -66,11 +71,6 @@ get_header(); ?>
             <div class="titulo-servicios">
               <strong><?php echo $lh->post_title; ?></strong>
             </div>
-            <div class="contenido-servicios">
-              <?php  $el_cont = $lh->post_content;
-                echo apply_filters('the_content', $el_cont);
-              ?>
-            </div>
           </div>
         <?php endforeach; ?>
 
@@ -81,7 +81,7 @@ get_header(); ?>
 
   </div>
 
-  <?php get_template_part( 'menu-servicios', get_post_format() ); ?>
+  <?php get_template_part( 'menu-servicios-root', get_post_format() ); ?>
 
   <div class="clear"></div>
 

@@ -71,6 +71,16 @@ o(document).ready(function() {
     }, 7000);
   }
 
+  if (o('.servicios:first-child .content-slider').length) {
+    var NewSlider = require('newslider');
+    contentSlider = new NewSlider(o('.servicios:first-child .content-slider'));
+
+    slideTimer = window.setInterval(function(){
+      contentSlider.next();
+    }, 7000);
+
+  }
+
     // seccion servicios
     // manejo de divs y 
     // de slider
