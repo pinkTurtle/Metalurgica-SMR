@@ -88,13 +88,6 @@ o(document).ready(function() {
     o(".descripciones .servicios").click(function() {
       if (o(this).find('.contenido-servicios').css('display')=='none') {
         o('.descripciones .servicios .contenido-servicios').slideUp( "slow" );
-        o('.contenido-padre').slideUp( "slow" );
-        o('.contenido-padre').css( 'opacity', '0' );
-        o('#menu-servicios').slideUp( "slow" );
-        o('.servicios-restantes').slideDown( "slow" );
-        o('.content-servicio').css( 'width', '85%' );
-        o('.content-servicio p').slideDown( "slow" );
-        o('.content-servicio p').css( 'opacity', '1' );
         o('.descripciones .servicios .contenido-servicios').css( 'opacity', '0' );
         o(this).find('.contenido-servicios').slideDown( "slow" );
         o(this).find('.contenido-servicios').css( 'opacity', '1' );
