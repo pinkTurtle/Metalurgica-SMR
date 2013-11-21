@@ -40,35 +40,66 @@ o(document).ready(function() {
 
   // conent slider
   if (o('.clientes-individual .content-slider').length) {
-    debug('Rendering main slider');
 
-    var NewSlider = require('newslider');
-    var firstslide = o('a.firstslide');
-    var nextslide = o('a.nextslide');
-    var prevslide = o('a.prevslide');
-    var lastslide = o('a.lastslide');
 
-    var mySlider = new NewSlider('.content-slider');
+    (function(){
+      var delay = 7000;
+      var slideTimer;
+      var NewSlider = require('newslider');
 
-    lastslide.click(function(){
-      mySlider.last();
-    });
+      var contentSlider = new NewSlider(o('.clientes-individual .content-slider'));
+      slider_restart();
 
-    firstslide.click(function(){
-      mySlider.first();
-    });
+      var sliderContainer = o('.slider-navigator');
 
-    nextslide.click(function(){
-      mySlider.next();
-    });
+      sliderContainer.on('click', 'div', function() {
+        var action = o(this).attr('class').substr(3);
+        repro[action]();
+      });
 
-    prevslide.click(function(){
-      mySlider.prev();
-    });
+      /**
+       * slider player
+       */
 
-    var slideTimer = window.setInterval(function(){
-      mySlider.next();
-    }, 7000);
+      var repro = {
+        play: function() {
+          contentSlider.next();
+          slider_restart();
+        },
+        stop: function(){
+          slider_stop();
+        },
+        left: function(){
+          contentSlider.prev();
+        },
+        right: function(){
+          contentSlider.next();
+        }
+      };
+
+      /**
+       * Stop the slider
+       */
+
+      function slider_stop(){
+        clearInterval(slideTimer);
+      }
+
+      /**
+       * Restart the slider
+       */
+
+      function slider_restart(){
+        if (slideTimer) {
+          clearInterval(slideTimer);
+        };
+
+        // run slider animation
+        slideTimer = window.setInterval(function(){
+          contentSlider.next();
+        }, delay);
+      }
+    })();
   }
 
   // Servicios slider

@@ -1066,10 +1066,10 @@ header nav .presionado:hover {
   width: 57%;
   position: relative;
 }
-#primary .wrapper article .clientes-individual .album-lightbox {
+#primary .wrapper article .clientes-individual .the-content-slider {
   position: absolute;
   left: -410px;
-  top: 25px;
+  top: -5px;
 }
 .descripciones .servicios {
   margin: 0px 0px 8px;
