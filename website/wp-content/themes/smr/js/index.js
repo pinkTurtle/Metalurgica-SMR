@@ -71,20 +71,72 @@ o(document).ready(function() {
     }, 7000);
   }
 
+  // Servicios slider
   if (o('.servicios:first-child .content-slider').length) {
-    var NewSlider = require('newslider');
-    contentSlider = new NewSlider(o('.servicios:first-child .content-slider'));
+    (function(){
+      var delay = 7000;
+      var slideTimer;
+      var NewSlider = require('newslider');
 
-    slideTimer = window.setInterval(function(){
-      contentSlider.next();
-    }, 7000);
+      var contentSlider = new NewSlider(o('.servicios:first-child .content-slider'));
+      slider_restart();
 
+      var sliderContainer = o('.slider-navigator');
+
+      sliderContainer.on('click', 'div', function() {
+        var action = o(this).attr('class').substr(3);
+        repro[action]();
+      });
+
+      /**
+       * slider player
+       */
+
+      var repro = {
+        play: function() {
+          contentSlider.next();
+          slider_restart();
+        },
+        stop: function(){
+          slider_stop();
+        },
+        left: function(){
+          contentSlider.prev();
+        },
+        right: function(){
+          contentSlider.next();
+        }
+      };
+
+      /**
+       * Stop the slider
+       */
+
+      function slider_stop(){
+        clearInterval(slideTimer);
+      }
+
+      /**
+       * Restart the slider
+       */
+
+      function slider_restart(){
+        if (slideTimer) {
+          clearInterval(slideTimer);
+        };
+
+        // run slider animation
+        slideTimer = window.setInterval(function(){
+          contentSlider.next();
+        }, delay);
+      }
+    })();
   }
 
     // seccion servicios
     // manejo de divs y 
     // de slider
-    //
+
     o(".descripciones .servicios").click(function() {
       if (o(this).find('.contenido-servicios').css('display')=='none') {
         o('.descripciones .servicios .contenido-servicios').slideUp( "slow" );
@@ -94,16 +146,70 @@ o(document).ready(function() {
         contentSlider = null;
         clearInterval(slideTimer);
 
-      if (o(this).find('.content-slider').length) {
-        NewSlider = require('newslider');
-        contentSlider = new NewSlider(o(this).find('.content-slider'));
+        if (o(this).find('.content-slider').length) {
+          var a = o(this).find('.content-slider');
+          console.log(a);
+          (function(){
+            var delay = 7000;
+            var slideTimer;
+            var NewSlider = require('newslider');
 
-        slideTimer = window.setInterval(function(){
-          contentSlider.next();
-        }, 7000);
-      }
-      }
+            var contentSlider = new NewSlider(a);
+            slider_restart();
 
+            var sliderContainer = o('.slider-navigator');
+
+            sliderContainer.on('click', 'div', function() {
+              var action = o(this).attr('class').substr(3);
+              repro[action]();
+            });
+
+            /**
+             * slider player
+             */
+
+            var repro = {
+              play: function() {
+                contentSlider.next();
+                slider_restart();
+              },
+              stop: function(){
+                slider_stop();
+              },
+              left: function(){
+                contentSlider.prev();
+              },
+              right: function(){
+                contentSlider.next();
+              }
+            };
+
+            /**
+             * Stop the slider
+             */
+
+            function slider_stop(){
+              clearInterval(slideTimer);
+            }
+
+            /**
+             * Restart the slider
+             */
+
+            function slider_restart(){
+              if (slideTimer) {
+                clearInterval(slideTimer);
+              };
+
+              // run slider animation
+              slideTimer = window.setInterval(function(){
+                contentSlider.next();
+              }, delay);
+            }
+          })();
+
+        }
+      }
     });
 
 });

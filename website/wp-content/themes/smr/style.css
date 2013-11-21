@@ -1088,7 +1088,7 @@ header nav .presionado:hover {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
   filter: alpha(opacity=0);
 }
-.descripciones .servicios .contenido-servicios .content-slider.album-lightbox.ngg-albumoverview {
+.descripciones .servicios .contenido-servicios .the-content-slider {
   position: absolute;
   top: -5px;
   left: -280px;
@@ -1271,6 +1271,35 @@ div#footer .wrap {
   background-color: #333;
   width: 100%;
   padding-top: 5px;
+}
+.the-content-slider .slider-navigator {
+  background-color: #333;
+  height: 0px;
+  color: #fff;
+  overflow: hidden;
+  -webkit-transition: height 0.5s;
+  -moz-transition: height 0.5s;
+  -o-transition: height 0.5s;
+  -ms-transition: height 0.5s;
+  transition: height 0.5s;
+}
+.the-content-slider .slider-navigator > div {
+  width: 25%;
+  float: left;
+  text-align: center;
+  font-size: 28px;
+  line-height: 24px;
+  height: 30px;
+  cursor: pointer;
+}
+.the-content-slider .slider-navigator > div:hover {
+  background-color: #000;
+}
+.the-content-slider .slider-navigator > div.sl-stop {
+  font-size: 20px;
+}
+.the-content-slider:hover .slider-navigator {
+  height: 30px;
 }
 .clientes-individual .album-lightbox.ngg-albumoverview {
   width: 385px;

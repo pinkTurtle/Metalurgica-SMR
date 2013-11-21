@@ -49,6 +49,29 @@
             width: 100%
             padding-top: 5px
 
+.the-content-slider
+  .slider-navigator
+    background-color: $gris-oscuro
+    height: 0px
+    color: white
+    overflow: hidden
+    transition: height 0.5s
+    > div
+      width: 25%
+      float: left
+      text-align: center
+      font-size: 28px
+      line-height: 24px
+      height: 30px
+      cursor: pointer
+      &:hover
+        background-color: black
+      &.sl-stop
+        font-size: 20px
+  &:hover
+    .slider-navigator
+      height: 30px
+
 .clientes-individual  
   .album-lightbox
     &.ngg-albumoverview
