@@ -1138,7 +1138,7 @@ header nav .presionado:hover {
   text-transform: uppercase;
   margin: 26px 10px 26px 0px;
   width: 140px;
-  float: right;
+  float: left;
   text-align: left;
 }
 #menu-servicios .menu-item .logo-servicio a .img-container {
@@ -1174,6 +1174,9 @@ body.page-template-pagina-php article {
 }
 .contenido .content-servicio.root {
   width: 40%;
+}
+.contenido .content-servicio.root h2 {
+  padding-top: 20px;
 }
 .contenido div.wpcf7 {
   width: 75%;
