@@ -1274,10 +1274,10 @@ div#footer .wrap {
 }
 .album-lightbox div .smr-album .ngg-album-link a span {
   position: absolute;
+  font-size: 12px;
   bottom: 0px;
   left: 0px;
   margin: 0px;
-  font-weight: bold;
   color: #fff;
   background-color: #333;
   width: 100%;
