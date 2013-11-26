@@ -50,10 +50,10 @@ Follow variables are useable :
   </div>
 
   <div class="slider-navigator">
-    <div class="sl-left">&laquo;</div>
-    <div class="sl-stop">[]</div>
-    <div class="sl-play">&gt;</div>
-    <div class="sl-right">&raquo;</div>
+    <div class="sl-left"><i class="icon-fast-bw"></i></div>
+    <div class="sl-stop"><i class="icon-pause"></i></div>
+    <div class="sl-play"><i class="icon-play"></i></div>
+    <div class="sl-right"><i class="icon-fast-fw"></i></div>
   </div>
 </div>
 <?php endif; ?>

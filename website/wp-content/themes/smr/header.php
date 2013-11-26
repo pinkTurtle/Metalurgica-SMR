@@ -15,6 +15,13 @@
 <html <?php language_attributes(); ?>>
 <!--<![endif]-->
 <head>
+  <link rel="stylesheet" href="<?php echo get_bloginfo('template_url'); ?>/fontello.css" type="text/css" />
+  <!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <!--[if IE 7]>
+  <link rel="stylesheet" href="<?php echo get_bloginfo('template_url'); ?>/fontello-ie7.css" type="text/css" />
+  <![endif]-->
   <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>" type="text/css" />
   <link href='http://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Monda:400,700' rel='stylesheet' type='text/css'>

@@ -1298,16 +1298,13 @@ div#footer .wrap {
   width: 25%;
   float: left;
   text-align: center;
-  font-size: 28px;
+  font-size: 24px;
   line-height: 24px;
   height: 30px;
   cursor: pointer;
 }
 .the-content-slider .slider-navigator > div:hover {
   background-color: #000;
-}
-.the-content-slider .slider-navigator > div.sl-stop {
-  font-size: 20px;
 }
 .the-content-slider:hover .slider-navigator {
   height: 30px;
