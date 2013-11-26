@@ -27,6 +27,7 @@
         font-size: 20px
         font-weight: 300
         margin: 0
+        margin-bottom: 30px
         padding: 10px 0 0 70px
         height: 40px
         &:before
@@ -92,18 +93,17 @@
           line-height: 18px
           margin: 0
           font-family: $titulos-font
-          color: $verde-strong
+          color: $verde-hover
           position: relative
           text-decoration: none
           &:before
             content: " > "
-            color: $verde-strong
+            color: $verde-hover
             position: absolute
             left: -10px
             top: 2px
-          &:hover
-            font-weight: 700
-            color: $verde-hover
+          &.padre
+            color: $gris-oscuro
         .desplegables
           float: none
         
@@ -221,8 +221,6 @@
 .descripciones
   .servicios
     margin: 0px 0px 8px
-    strong
-      cursor: pointer
     .contenido-servicios
       transition: opacity 1s
       display: none
@@ -296,7 +294,7 @@ body.page-template-pagina2-php
 
 body.page-template-pagina-php
   article
-    min-height: 440px
+    min-height: 470px
 
 div.descripciones .servicios:first-child .contenido-servicios
   //opacity: 1

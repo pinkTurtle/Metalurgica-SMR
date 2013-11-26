@@ -63,7 +63,7 @@ $servicios = get_page_by_path($sv_path);
 
       <div id="bloque-<?php echo $lh->ID; ?>" class="<?php echo 'servicios '.$lb_class; ?>">
         <div class="titulo-servicios">
-          <strong><?php echo $lh->post_title; ?></strong>
+          <strong class="padre"><?php echo $lh->post_title; ?></strong>
         </div>
       </div>
       <?php endforeach; ?>

@@ -863,6 +863,7 @@ header nav .presionado:hover {
   font-size: 20px;
   font-weight: 300;
   margin: 0;
+  margin-bottom: 30px;
   padding: 10px 0 0 70px;
   height: 40px;
 }
@@ -932,20 +933,19 @@ header nav .presionado:hover {
   line-height: 18px;
   margin: 0;
   font-family: 'Monda', sans-serif;
-  color: #165622;
+  color: #088a4b;
   position: relative;
   text-decoration: none;
 }
 #primary .wrapper article .descripciones strong:before {
   content: " > ";
-  color: #165622;
+  color: #088a4b;
   position: absolute;
   left: -10px;
   top: 2px;
 }
-#primary .wrapper article .descripciones strong:hover {
-  font-weight: 700;
-  color: #088a4b;
+#primary .wrapper article .descripciones strong.padre {
+  color: #333;
 }
 #primary .wrapper article .descripciones .desplegables {
   float: none;
@@ -1082,9 +1082,6 @@ header nav .presionado:hover {
 .descripciones .servicios {
   margin: 0px 0px 8px;
 }
-.descripciones .servicios strong {
-  cursor: pointer;
-}
 .descripciones .servicios .contenido-servicios {
   -webkit-transition: opacity 1s;
   -moz-transition: opacity 1s;
@@ -1170,7 +1167,7 @@ body.page-template-pagina2-php article {
   min-height: 500px;
 }
 body.page-template-pagina-php article {
-  min-height: 440px;
+  min-height: 470px;
 }
 .contenido .content-servicio {
   width: 85%;
