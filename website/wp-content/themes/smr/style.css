@@ -382,6 +382,11 @@ input::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
+a {
+  color: #088a4b;
+  font-family: 'Monda', sans-serif;
+  font-size: 15px;
+}
 form {
   margin-bottom: 20px;
 }
