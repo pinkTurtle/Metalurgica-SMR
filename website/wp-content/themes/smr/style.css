@@ -1043,10 +1043,13 @@ header nav .presionado:hover {
   float: left;
   margin-right: 0px;
   overflow: hidden;
+  text-align: center;
 }
 #primary .wrapper article .clientes .logo-cliente img {
-  width: 100%;
+  width: auto;
   height: auto;
+  max-height: 100%;
+  max-width: 100%;
 }
 #primary .wrapper article .clientes .bloque-clientes {
   width: 80%;
