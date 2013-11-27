@@ -958,6 +958,10 @@ header nav .presionado:hover {
 #primary .wrapper article .descripciones strong.padre {
   color: #333;
 }
+#primary .wrapper article .descripciones strong.padre:hover {
+  color: #333;
+  cursor: auto;
+}
 #primary .wrapper article .descripciones strong:hover {
   color: #0aac7d;
   cursor: pointer;
@@ -1092,7 +1096,7 @@ header nav .presionado:hover {
 #primary .wrapper article .clientes-individual .the-content-slider {
   position: absolute;
   left: -410px;
-  top: 18px;
+  top: -5px;
 }
 .descripciones .servicios {
   margin: 0px 0px 8px;
