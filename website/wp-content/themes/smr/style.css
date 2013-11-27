@@ -946,6 +946,10 @@ header nav .presionado:hover {
 #primary .wrapper article .descripciones strong.padre {
   color: #333;
 }
+#primary .wrapper article .descripciones strong:hover {
+  color: #0aac7d;
+  cursor: pointer;
+}
 #primary .wrapper article .descripciones .desplegables {
   float: none;
 }
