@@ -293,6 +293,11 @@ ul.large li {
 li p {
   line-height: 21px;
 }
+img.alignleft {
+  display: block;
+  float: left;
+  margin: 10px 10px 10px 0px;
+}
 img.scale-with-grid {
   max-width: 100%;
   height: auto;
