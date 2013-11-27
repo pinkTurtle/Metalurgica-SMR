@@ -693,26 +693,27 @@ a.link-button-light:hover {
   background-color: #fff;
   height: 330px;
 }
-.my-slider ul li.currentslide div.desc {
-  background-color: transparent;
-}
 .my-slider ul li.currentslide div.desc p {
   color: #feffff;
 }
+.my-slider ul li.currentslide img {
+  filter: inherit;
+}
 .my-slider ul li img {
   width: 100%;
+  -webkit-filter: grayscale(1);
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  filter: #808080;
+  filter: grayscale(100%);
+  filter: url("desaturate.svg#greyscale");
 }
 .my-slider ul li div.desc {
-  -webkit-transition: background-color 1s;
-  -moz-transition: background-color 1s;
-  -o-transition: background-color 1s;
-  -ms-transition: background-color 1s;
-  transition: background-color 1s;
+  z-index: 10;
   height: 100%;
   width: 100%;
   padding: 40px;
   position: absolute;
-  background-color: rgba(0,0,0,0.6);
 }
 .my-slider ul li div.desc p {
   -webkit-transition: color 1s;

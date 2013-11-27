@@ -14,10 +14,19 @@
       div.desc
         p
           color: $font_white
-        background-color: transparent
+        //background-color: transparent
+      img
+        filter: inherit
     img
       width: 100%;
+      -webkit-filter: grayscale(1)
+      -webkit-filter: grayscale(100%)
+      -moz-filter: grayscale(100%)
+      filter: gray
+      filter: grayscale(100%)
+      filter: url(desaturate.svg#greyscale)
     div.desc
+      z-index: 10
       p
         transition: color 1s
         padding-top: 180px
@@ -33,10 +42,10 @@
         text-align: right
         span
           font-size: 12px
-      transition: background-color 1s
       height: 100%
       width: 100%
       padding: 40px
       position: absolute
-      background-color: rgba(0,0,0,0.6)
+      //background-color: rgba(0,0,0,0.6)
+      //transition: background-color 1s
 
