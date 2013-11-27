@@ -703,17 +703,14 @@ a.link-button-light:hover {
   background-color: #fff;
   height: 330px;
 }
-.my-slider ul li.currentslide {
-img
-  -webkit-filter: none;
-  -webkit-filter: none;
-  -moz-filter: none;
-  filter: none;
-  filter: none;
-  filter: none;
-}
 .my-slider ul li.currentslide div.desc p {
   color: #feffff;
+}
+.my-slider ul li.currentslide img {
+  -webkit-filter: inherit;
+  -webkit-filter: inherit;
+  -moz-filter: inherit;
+  filter: inherit;
 }
 .my-slider ul li img {
   width: 100%;
