@@ -296,7 +296,7 @@ li p {
 img.alignleft {
   display: block;
   float: left;
-  margin: 10px 10px 10px 0px;
+  margin: 0px 20px 10px 0px;
 }
 img.scale-with-grid {
   max-width: 100%;
