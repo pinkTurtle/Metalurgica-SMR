@@ -34,6 +34,10 @@ o(document).ready(function() {
     mySlider.goto(1);
 
     var slideTimer = window.setInterval(function(){
+      if(mySlider.current >= (mySlider.slides.length - 2)) {
+        mySlider.current = 0;
+      }
+      mySlider.slides.eq(mySlider.current - 2).removeClass("currentslide");
       mySlider.next();
     }, 7000);
   }

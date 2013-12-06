@@ -12,6 +12,13 @@ get_header(); ?>
     ));
     // The Loop
     if (have_posts()) :
+    ?>  
+
+      <li>
+        <img src="<?php echo get_bloginfo('template_url'); ?>/images/ending.jpg" />
+      </li>
+
+      <?php
       while ($initslides->have_posts()) :
       $initslides->the_post();
       $post_thumb_id = get_post_thumbnail_id($post->ID);
@@ -28,6 +35,13 @@ get_header(); ?>
 
       <?php
       endwhile;
+      ?>
+
+      <li>
+        <img src="<?php echo get_bloginfo('template_url'); ?>/images/ending.jpg" />
+      </li>
+
+    <?php
     endif;
     // end loop
     wp_reset_postdata();
