@@ -31,6 +31,7 @@ o(document).ready(function() {
       mySlider.prev();
     });
 
+    mySlider.slides.eq(0).removeClass("currentslide");
     mySlider.goto(1);
 
     var slideTimer = window.setInterval(function(){
