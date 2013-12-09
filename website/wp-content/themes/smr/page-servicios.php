@@ -18,9 +18,11 @@ get_header(); ?>
 <hr />
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-  <h1>
-    Servicios
-  </h1>
+  <a href="<?php the_permalink(); ?>">
+    <h1>
+      Servicios
+    </h1>
+  </a>
 <?php
 $sv_path = 'servicios/mantenimiento-electromecanico-industrial';
 $servicios = get_page_by_path($sv_path);

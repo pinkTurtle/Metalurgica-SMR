@@ -19,17 +19,19 @@ get_header(); ?>
         <hr />
         <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-          <h1>
-            Clientes
-          </h1>
+          <a href=" <?php echo site_url(); ?>/clientes">
+            <h1>
+              Clientes
+            </h1>
+          </a>
           <div class="contenido">
             <div class="clientes-individual">
               <div class="titulo-serv">
                 <?php the_title(); ?>
               </div>
                 <strong>
-                <?php $ubicacion = simple_fields_value('ubicacion'); ?>
-                <?php echo $ubicacion; ?>
+                  <?php $ubicacion = simple_fields_value('ubicacion'); ?>
+                  <?php echo $ubicacion; ?>
                 </strong>
 
               <div class="cliente-contenido">

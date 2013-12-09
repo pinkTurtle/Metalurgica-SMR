@@ -18,9 +18,11 @@ get_header(); ?>
 <hr />
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-  <h1>
-    Servicios
-  </h1>
+  <a href=" <?php echo site_url(); ?>/servicios">
+    <h1>
+      Servicios
+    </h1>
+  </a>
 
   <div class="contenido">
 
@@ -35,9 +37,11 @@ get_header(); ?>
     </div>
 
     <div class="content-servicio">
+      <a href="<?php the_permalink(); ?>">
       <h2>
         <?php the_title(); ?>
       </h2>
+      </a>
 
       <?php the_content(); ?>
     </div>

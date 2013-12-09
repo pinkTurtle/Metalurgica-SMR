@@ -26,7 +26,9 @@
                 </div>
               </a>
               <?php endif; ?>
-            <p><?php echo $lh->post_title; ?></p>
+            <a href="<?php echo $lb_link; ?>">
+              <p><?php echo $lh->post_title; ?></p>
+            </a>
             </div>
           <?php endforeach; ?>
 

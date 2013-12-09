@@ -31,7 +31,9 @@
                 </a>
                 <?php endif; ?>
               </div>
-              <p><strong><?php echo $lh->post_title; ?></strong></p>
+              <a href="<?php echo $lb_link; ?>">
+                <p><strong><?php echo $lh->post_title; ?></strong></p>
+              </a>
             </div>
           <?php endforeach; ?>
 

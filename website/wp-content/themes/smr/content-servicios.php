@@ -11,23 +11,24 @@
 <hr />
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-  <h1>
-    <?php the_title(); ?>
-  </h1>
+  <a href="<?php the_permalink(); ?>">
+    <h1>
+      <?php the_title(); ?>
+    </h1>
+  </a>
   <div class="contenido">
 
     <?php if(is_page('servicios')) : ?> 
     <div class="logo-servicio">
       <?php if (has_post_thumbnail()) : ?> 
-      <a href="<?php the_permalink(); ?>">
-        <div class="img-container">
-        <?php echo get_the_post_thumbnail(get_the_ID(), thumbnail); ?>
-        </div>
-      </a>
+        <a href="<?php the_permalink(); ?>">
+          <div class="img-container">
+          <?php echo get_the_post_thumbnail(get_the_ID(), thumbnail); ?>
+          </div>
+        </a>
       <?php endif; ?>
     </div>
     <?php endif; ?>
-
 
     <?php the_content(); ?>
   </div>
