@@ -32,49 +32,49 @@
 
   $paginas_hijas = get_pages($argumentos); 
   ?>
-<?php if($paginas_hijas) { ?>
-  <?php foreach($paginas_hijas as $lh) : ?>
-    <?php
-      $lb_class = $lh->post_name;
-      $lb_link = get_permalink( $lh->ID );
-      $classes = array($lh->post_name);
-      $ubicacion = simple_fields_get_post_value($lh->ID,array(1,1),true);
-    ?>
+  <?php if($paginas_hijas) { ?>
+    <?php foreach($paginas_hijas as $lh) : ?>
+      <?php
+        $lb_class = $lh->post_name;
+        $lb_link = get_permalink( $lh->ID );
+        $classes = array($lh->post_name);
+        $ubicacion = simple_fields_get_post_value($lh->ID,array(1,1),true);
+      ?>
 
-    <?php $str_class = ''; ?>
-    <?php foreach (get_post_class($classes, $lh->ID) as $cl) : ?>
-      <?php $str_class .= $cl . ' '; ?>
+      <?php $str_class = ''; ?>
+      <?php foreach (get_post_class($classes, $lh->ID) as $cl) : ?>
+        <?php $str_class .= $cl . ' '; ?>
+      <?php endforeach; ?>
+
+      <div id="bloque-<?php echo $lh->ID; ?>" class="<?php echo 'clientes '.$lb_slug.' '.$lb_class; ?>">
+        <div class="logo-cliente">
+          <?php if (has_post_thumbnail($lh->ID)) : ?> 
+          <a href="<?php echo $lb_link; ?>">
+            <?php echo get_the_post_thumbnail($lh->ID, thumbnail); ?>
+          </a>
+          <?php endif; ?>
+        </div>
+        <div class="bloque-clientes">
+          <div class="titulo-clientes">
+            <a href="<?php echo $lb_link; ?>">
+                  <?php echo $lh->post_title; ?>
+            </a>
+          </div>
+          <strong><?php echo $ubicacion; ?></strong>
+          <p>
+            <?php echo truncar($lh->post_content, 40); ?>
+          </p>
+
+        </div>
+      </div> <!-- contenido -->
     <?php endforeach; ?>
 
-    <div id="bloque-<?php echo $lh->ID; ?>" class="<?php echo 'clientes '.$lb_slug.' '.$lb_class; ?>">
-      <div class="logo-cliente">
-        <?php if (has_post_thumbnail($lh->ID)) : ?> 
-        <a href="<?php echo $lb_link; ?>">
-          <?php echo get_the_post_thumbnail($lh->ID, thumbnail); ?>
-        </a>
-        <?php endif; ?>
-      </div>
-      <div class="bloque-clientes">
-        <div class="titulo-clientes">
-          <a href="<?php echo $lb_link; ?>">
-                <?php echo $lh->post_title; ?>
-          </a>
-        </div>
-        <strong><?php echo $ubicacion; ?></strong>
-        <p>
-          <?php echo truncar($lh->post_content, 40); ?>
-        </p>
-
-      </div>
-    </div>
-  <?php endforeach; ?>
-
-  <div class="clear"></div>
-<?php } ?>
-<!-- paginas hijas -->
+    <div class="clear"></div>
+  <?php } ?>
+  <!-- paginas hijas -->
 
   </div>
 
-	<footer class="entry-meta">
+	<footer class="entry-meta clear">
 	</footer><!-- .entry-meta -->
 </article><!-- #post -->

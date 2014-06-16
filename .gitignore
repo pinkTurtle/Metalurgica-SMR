@@ -4,6 +4,7 @@ website/js/main.js
 website/cache
 website/wp-config.php
 website/wp-content/gallery/
+website/wp-content/
 website/.htaccess
 sources/styles/node_modules
 sources/javascript/components
