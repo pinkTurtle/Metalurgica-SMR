@@ -1,7 +1,4 @@
 
-.icon-play:before { content: '\e803'; } /* '' */
-.icon-pause:before { content: '\e802'; } /* '' */
-.icon-to-end-alt:before { content: '\e800'; } /* '' */
-.icon-to-start-alt:before { content: '\e801'; } /* '' */
-.icon-fast-fw:before { content: '\e805'; } /* '' */
-.icon-fast-bw:before { content: '\e804'; } /* '' */
+.icon-search:before { content: '\e800'; } /* '' */
+.icon-fast-fw:before { content: '\e801'; } /* '' */
+.icon-fast-bw:before { content: '\e802'; } /* '' */
