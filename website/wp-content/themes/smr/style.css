@@ -1305,6 +1305,28 @@ div#footer .wrap {
   width: 100.5%;
   padding-top: 5px;
 }
+.album-lightbox div .smr-album .ngg-album-link .lupa {
+  position: absolute;
+  width: 100%;
+  float: left;
+  text-align: center;
+  cursor: pointer;
+  background-color: rgba(0,0,0,0.3);
+  display: none;
+}
+.album-lightbox div .smr-album .ngg-album-link .lupa a.icon-search:before {
+  padding: 28.4% 0%;
+  color: #fff;
+  font-size: 50px;
+  display: block;
+  height: 92%;
+  margin: 0;
+  text-align: center;
+  width: 100%;
+}
+.album-lightbox div .smr-album .ngg-album-link:hover .lupa {
+  display: block;
+}
 .the-content-slider .slider-navigator {
   background-color: #333;
   height: 0px;

@@ -28,6 +28,9 @@ Follow variables are useable :
             ?>
 
             <?php foreach ( $images as $image ) : ?>
+
+            <div class="lupa"><a href="<?php echo $image->imageURL; ?>" <?php echo $image->thumbcode; ?> class="icon-search"></a></div>
+
               <?php if ( $imgcntr == 0 ): ?>
                 <a href="<?php echo $image->imageURL; ?>" <?php echo $image->thumbcode; ?> >
                   <img class="Thumb" alt="<?php echo $gallery->title ?>" src="<?php echo $gallery->previewurl ?>" />

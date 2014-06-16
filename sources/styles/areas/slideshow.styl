@@ -50,6 +50,26 @@
             background-color: $gris-oscuro
             width: 100.5%
             padding-top: 5px
+        .lupa
+          position: absolute
+          width: 100%
+          float: left
+          text-align: center
+          cursor: pointer
+          background-color: rgba(0,0,0,0.3)
+          display: none
+          a.icon-search:before
+            padding: 28.4% 0%
+            color: white
+            font-size: 50px
+            display: block
+            height: 92%
+            margin: 0
+            text-align: center
+            width: 100%
+        &:hover
+          .lupa
+            display: block
 
 .the-content-slider
   .slider-navigator
