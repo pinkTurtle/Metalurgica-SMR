@@ -1118,7 +1118,7 @@ header nav .presionado:hover {
 .descripciones .servicios .contenido-servicios .the-content-slider {
   position: absolute;
   top: -5px;
-  left: -280px;
+  left: -410px;
 }
 .descripciones .servicios:first-child .contenido-servicios {
   opacity: 1;
@@ -1260,8 +1260,8 @@ div#footer .wrap {
   height: 100%;
 }
 .album-lightbox.ngg-albumoverview {
-  height: 220px;
-  width: 270px;
+  width: 385px;
+  height: 310px;
   border: 10px solid #333;
 }
 .album-lightbox.my-slider {
@@ -1276,8 +1276,8 @@ div#footer .wrap {
   transition: left 1s;
 }
 .album-lightbox div .smr-album {
-  width: 250px;
-  height: 200px;
+  width: 365px;
+  height: 290px;
 }
 .album-lightbox div .smr-album .ngg-album-link {
   position: relative;
@@ -1352,15 +1352,6 @@ div#footer .wrap {
 }
 .the-content-slider:hover .slider-navigator {
   height: 30px;
-}
-.clientes-individual .album-lightbox.ngg-albumoverview {
-  width: 385px;
-  height: 310px;
-  border: 10px solid #333;
-}
-.clientes-individual .album-lightbox .smr-album {
-  width: 365px;
-  height: 290px;
 }
 /* Component */
 .newslider-viewport {

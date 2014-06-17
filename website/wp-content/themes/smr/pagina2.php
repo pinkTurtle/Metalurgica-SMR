@@ -85,7 +85,6 @@ get_header(); ?>
 
   </div>
 
-  <?php get_template_part( 'menu-servicios', get_post_format() ); ?>
 
   <div class="clear"></div>
 
