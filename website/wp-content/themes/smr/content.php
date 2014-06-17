@@ -20,6 +20,6 @@
     <?php the_content(); ?>
   </div>
 
-	<footer class="entry-meta">
+	<footer class="entry-meta clear">
 	</footer><!-- .entry-meta -->
 </article><!-- #post -->
