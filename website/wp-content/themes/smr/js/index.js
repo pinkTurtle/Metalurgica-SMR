@@ -2,6 +2,7 @@ var o = require('component-jquery');
 var debug = require('debug')('smr');
 
 o(document).ready(function() {
+  o('div.ngg-clear').remove();
 
   // Main slider
   if (o('.my-slider').length) {
