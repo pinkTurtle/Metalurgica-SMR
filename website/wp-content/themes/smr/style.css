@@ -969,8 +969,36 @@ header nav .presionado:hover {
   color: #0aac7d;
   cursor: pointer;
 }
+#primary .wrapper article .descripciones .activo strong {
+  color: #0aac7d;
+}
 #primary .wrapper article .descripciones .desplegables {
   float: none;
+}
+#primary .wrapper article .descripciones .servicios {
+  margin: 0px 0px 8px;
+}
+#primary .wrapper article .descripciones .servicios .contenido-servicios {
+  -webkit-transition: opacity 1s;
+  -moz-transition: opacity 1s;
+  -o-transition: opacity 1s;
+  -ms-transition: opacity 1s;
+  transition: opacity 1s;
+  display: none;
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+}
+#primary .wrapper article .descripciones .servicios .contenido-servicios .the-content-slider {
+  position: absolute;
+  top: -5px;
+  left: -410px;
+}
+#primary .wrapper article .descripciones .servicios:first-child .contenido-servicios {
+  opacity: 1;
+  -ms-filter: none;
+  filter: none;
+  display: block;
 }
 #primary .wrapper article .smr-servicios {
   border-top: 1px dotted #088a4b;
@@ -1100,31 +1128,6 @@ header nav .presionado:hover {
   position: absolute;
   left: -410px;
   top: -5px;
-}
-.descripciones .servicios {
-  margin: 0px 0px 8px;
-}
-.descripciones .servicios .contenido-servicios {
-  -webkit-transition: opacity 1s;
-  -moz-transition: opacity 1s;
-  -o-transition: opacity 1s;
-  -ms-transition: opacity 1s;
-  transition: opacity 1s;
-  display: none;
-  opacity: 0;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-  filter: alpha(opacity=0);
-}
-.descripciones .servicios .contenido-servicios .the-content-slider {
-  position: absolute;
-  top: -5px;
-  left: -410px;
-}
-.descripciones .servicios:first-child .contenido-servicios {
-  opacity: 1;
-  -ms-filter: none;
-  filter: none;
-  display: block;
 }
 .logo-servicio {
   width: 110px;

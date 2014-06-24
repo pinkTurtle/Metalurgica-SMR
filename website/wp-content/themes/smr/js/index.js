@@ -176,8 +176,10 @@ o(document).ready(function() {
 
     o(".descripciones .servicios").click(function() {
       if (o(this).find('.contenido-servicios').css('display')=='none') {
+        o('.descripciones .servicios').removeClass( "activo" );
         o('.descripciones .servicios .contenido-servicios').slideUp( "slow" );
         o('.descripciones .servicios .contenido-servicios').css( 'opacity', '0' );
+        o(this).addClass("activo");
         o(this).find('.contenido-servicios').slideDown( "slow" );
         o(this).find('.contenido-servicios').css( 'opacity', '1' );
         contentSlider = null;

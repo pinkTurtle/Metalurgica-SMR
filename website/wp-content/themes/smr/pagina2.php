@@ -59,14 +59,18 @@ get_header(); ?>
         ); 
 
         $paginas_hijas = get_pages($argumentos); 
+        $counterclass = 0;
         ?>
       <?php if($paginas_hijas) { ?>
         <?php foreach($paginas_hijas as $lh) : ?>
           <?php
+            $counterclass ++;
             $lb_class = $lh->post_name;
+            $serviceclass='servicios '.$lb_class;
+            if($counterclass == 1) : $serviceclass.=' activo'; endif;
           ?>
 
-          <div id="bloque-<?php echo $lh->ID; ?>" class="<?php echo 'servicios '.$lb_class; ?>">
+          <div id="bloque-<?php echo $lh->ID; ?>" class="<?php echo $serviceclass; ?>">
             <div class="titulo-servicios">
               <strong><?php echo $lh->post_title; ?></strong>
             </div>

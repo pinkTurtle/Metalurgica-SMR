@@ -109,9 +109,26 @@
           &:hover
             color: #0aac7d
             cursor: pointer
+        .activo
+          strong
+            color: #0aac7d
         .desplegables
           float: none
-        
+        .servicios
+          margin: 0px 0px 8px
+          .contenido-servicios
+            transition: opacity 1s
+            display: none
+            opacity: 0
+            .the-content-slider
+              position: absolute
+              top: -5px
+              left: -410px
+          &:first-child
+            .contenido-servicios
+              opacity: 1
+              display: block
+
       .smr-servicios
         border-top: 1px dotted $verde-hover
         display: inline-block
@@ -223,22 +240,6 @@
           left: -410px
           top: -5px
 
-.descripciones
-  .servicios
-    margin: 0px 0px 8px
-    .contenido-servicios
-      transition: opacity 1s
-      display: none
-      opacity: 0
-      .the-content-slider
-        position: absolute
-        top: -5px
-        left: -410px
-    &:first-child
-      .contenido-servicios
-        opacity: 1
-        display: block
-
 .logo-servicio
   width: 110px
   height: 110px
@@ -330,3 +331,5 @@ div.descripciones .servicios:first-child .contenido-servicios
 
 .contenido-padre
   transition: opacity 1s
+
+

@@ -58,6 +58,7 @@ $servicios = get_page_by_path($sv_path);
       ); 
 
       $paginas_hijas = get_pages($argumentos); 
+      echo 'caca';
       ?>
       <?php if($paginas_hijas) { ?>
       <?php foreach($paginas_hijas as $lh) : ?>
